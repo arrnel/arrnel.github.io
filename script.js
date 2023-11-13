@@ -116,7 +116,7 @@ function changeCVFileForLang(lang) {
     lang = getCookieValue('lang');
     if (lang === 'ru') {
         document.getElementById('cv-btn').onclick = function () {
-            window.open('assets/cv_ru.pdf')
+            window.open('assets/cv-ru.pdf')
         };
     } else {
         document.getElementById('cv-btn').onclick = function () {
