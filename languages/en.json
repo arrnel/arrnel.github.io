@@ -1,0 +1,78 @@
+{
+  "header": {
+    "logo": "Romanov Dmitriy",
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact",
+      "language": "Рус"
+    }
+  },
+  "profile": {
+    "greetings": "Hello! I'm",
+    "fullname": "Romanov Dmitriy",
+    "position": "Full-stack QA Engineer",
+    "buttons": {
+      "cv": "Download CV",
+      "contact": "Contact Info"
+    }
+  },
+  "about": {
+    "description": "Get To Know More",
+    "title": "About Me",
+    "experience": {
+      "title": "Experience",
+      "description": "3+ years<br/>Full-stack QA Engineer"
+    },
+    "education": {
+      "title": "Education",
+      "description": "<b>M.Sc.:</b> Applied Mathematics & Computer Science<br/><b>B.Sc.:</b> Computer Information Systems & Database Management"
+    },
+    "summary": "Over 3 years of experience in e-procurement testing. I have expertise in manual testing and automation of UI and API, plus configuring processes in CI/CD. I enjoy watching testing conference videos and am eager and prepared to gain new experiences and knowledge."
+  },
+  "experience": {
+    "description": "Explore My",
+    "title": "Work Experience",
+    "in": "в",
+    "works": [
+      {
+        "position": "Full-stack QA Engineer",
+        "company": "ROSELTORG",
+        "dates": "11.2019-08.2023",
+        "description": "Проверял функциональные требования продукта. Проводил функциональное тестирование web-приложения для B2B и B2C. Поднимал с нуля процессы автоматизации и CI/CD. Активно участвовал в развитии своих проектов и отдела, предлагая новые идеи, помогая решать проблемы с задачами, а также способствовал развитию hard-skills коллег."
+      },
+      {
+        "position": "System Engineer",
+        "company": "\"INFORMATION TECHNOLOGY CENTER\" OF THE CHUVASH REPUBLIC",
+        "dates": "11.2023-11.2019",
+        "description": "Provided the operation of telecommunications and computer equipment for the executive authorities and local self-government of the Chuvash Republic."
+      }
+    ]
+  },
+  "projects": {
+    "description": "Browse My",
+    "title": "Projects",
+    "buttons": {
+      "site": "Site",
+      "github": "GitHub",
+      "allure": "Allure",
+      "selenoid": "Selenoid",
+      "ci": "TeamCity"
+    },
+    "project_info": [
+      {
+        "name": "ClickUp",
+        "description": "Cross-platform service for productivity team-working"
+      }
+    ]
+  },
+  "contact": {
+    "description": "Get in Touch",
+    "title": "Contact Me",
+    "telegram_description": "Text me",
+    "email_description": "Don't click, pls",
+    "linkedin_description": "LinkedIn"
+  },
+  "copyright": "©Романов Дмитрий, 2023 г. Все права защищены."
+}
