@@ -5,22 +5,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-function isCookieExists(cookieName) {
-    const cookiesArray = document.cookie.split(';');
-    if (cookiesArray[0] === "") {
-        return false;
-    }
-    for (let i = 0; i < cookiesArray.length; i++) {
-        const cookie = cookiesArray[i].trim();
-        // Проверяем, начинается ли текущее куки с искомого имени
-        if (cookie.indexOf(cookieName + '=') === 0) {
-            // Найдено соответствие, возвращаем true
-            return true;
-        }
-    }
-    return false;
-}
-
 function getCookieValue(cookieName) {
     const cookiesArray = document.cookie.split(';');
     for (let i = 0; i < cookiesArray.length; i++) {
@@ -69,7 +53,6 @@ function changePageLanguage() {
     }
 
 }
-
 
 function translateLanguageOnStart() {
     let currentLang = getCookieValue('lang');
@@ -124,7 +107,6 @@ function changeCVFileForLang(lang) {
         };
     }
 }
-
 
 window.onload = function () {
     translateLanguageOnStart();
