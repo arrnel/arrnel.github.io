@@ -72,6 +72,12 @@
   .project-containers  {
     margin-top: 0;
   }
+  #about .section-container{
+    margin-top: 5vh;
+  }
+  #about .about-containers{
+    margin-bottom: 3rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
