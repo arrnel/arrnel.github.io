@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "profile": {
+    "profile_image": "Profile image",
+    "greetings": "Hi! I'm",
+    "fullname": "Romanov Dmitriy",
+    "position": "Full-stack QA Engineer",
+    "buttons": {
+      "cv": "Download CV",
+      "contact": "Contact"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "linkedin": "Linkedin",
+      "github": "GitHub"
+    }
+  },
+  "name": "Romanov Dmitriy",
+  "title": "Full-stack QA Engineer",
+  "summary": "Over 3 years of experience in e-procurement testing. I have expertise in manual testing and automation of UI and API, plus configuring processes in CI/CD. I enjoy watching testing conference videos. I'm eager and prepared to gain new experiences and knowledge.",
+  "experience_years": "3+ years",
+  "education.bsc": "Computer Information Systems & Database Management",
+  "education.msc": "Applied Mathematics & Computer Science",
+  "sections.about": "About Me",
+  "sections.experience": "Work Experience",
+  "sections.education": "Education",
+  "sections.projects": "Projects",
+  "sections.contacts": "Contacts",
+  "work1.title": "Full-stack QA Engineer at ROSELTORG",
+  "work1.description": "Reviewed product requirement documents and functional specifications. Implemented and maintained automated E2E and integration tests. Demonstrated teamwork by promoting ideas, helping other team members grow their skills.",
+  "work1.start_date": "11.2019",
+  "work1.end_date": "08.2023",
+  "work2.title": "System Engineer at INFORMATION TECHNOLOGY CENTER OF THE CHUVASH REPUBLIC",
+  "work2.description": "Provided the operation of telecommunications and computer equipment for the executive authorities and local self-government of the Chuvash Republic.",
+  "work2.start_date": "11.2018",
+  "work2.end_date": "11.2019",
+  "project1.title": "ClickUp",
+  "project1.short_description": "Cross-platform service for productivity team-working",
+  "project1.description": "Cross-platform service for productivity team-working. Technologies: Allure, Selenoid, TeamCity.",
+  "contact.github.title": "GitHub",
+  "ongoing": "Present",
+  "buttons.more": "More",
+  "buttons.close": "Close"
+}
