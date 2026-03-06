@@ -1,0 +1,8 @@
+.themeSwitcherWrapper {
+    display: flex;
+    align-content: center;
+}
+
+.themeSwitcher .icon {
+    width: var(--icon-width-small);
+}

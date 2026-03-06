@@ -1,0 +1,21 @@
+.contactsSectionContentContainer{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contactsList {
+    display: flex;
+    justify-content: center;
+    border: var(--contrast-color) var(--border-profile-button);
+    background-color: var(--card-bg);
+    color: var(--contrast-color);
+    border-radius: 2rem;
+    margin: 2rem auto;
+    padding: 0.5rem 0.8rem;
+    height: fit-content;
+    gap: 3rem
+}

@@ -1,0 +1,81 @@
+.profileContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    max-height: 100%;
+    height: 100%;
+    gap: 10rem;
+    padding: 0;
+}
+
+.profileImageContainer {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    max-width: var(--image-width);
+    max-height: var(--image-width);
+}
+
+.profileImageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.profileData {
+    display: flex;
+    flex-direction: column;
+}
+
+.position {
+    color: var(--position-color);
+}
+
+.profileButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.profileButton {
+    padding: 0.8rem 0.5rem;
+    background-color: var(--bg-color);
+    color: var(--contrast-color);
+    border: var(--contrast-color) var(--border-profile-button);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-bold);
+    width: 9rem;
+    height: 3rem;
+    cursor: pointer;
+
+}
+
+.profileButton:hover {
+    color: var(--bg-color);
+    background-color: var(--contrast-color);
+}
+
+.btn2 {
+    color: var(--bg-color);
+    background-color: var(--contrast-color);
+}
+
+.profileButton:hover,
+.btn2:hover {
+    opacity: 0.8;
+}
+
+.socialButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.socialButtonContainer img {
+    border: var(--border-profile-button);
+    border-radius: var(--icon-width-small);
+}

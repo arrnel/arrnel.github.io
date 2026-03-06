@@ -1,5 +1,6 @@
 {
   "nav": {
+    "profile": "Profile",
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
@@ -9,7 +10,7 @@
     "profile_image": "Profile image",
     "greetings": "Hi! I'm",
     "fullname": "Romanov Dmitriy",
-    "position": "Full-stack QA Engineer",
+    "position": "QA Automation Engineer",
     "buttons": {
       "cv": "Download CV",
       "contact": "Contact"
@@ -20,30 +21,84 @@
       "github": "GitHub"
     }
   },
-  "name": "Romanov Dmitriy",
-  "title": "Full-stack QA Engineer",
-  "summary": "Over 3 years of experience in e-procurement testing. I have expertise in manual testing and automation of UI and API, plus configuring processes in CI/CD. I enjoy watching testing conference videos. I'm eager and prepared to gain new experiences and knowledge.",
-  "experience_years": "3+ years",
-  "education.bsc": "Computer Information Systems & Database Management",
-  "education.msc": "Applied Mathematics & Computer Science",
-  "sections.about": "About Me",
-  "sections.experience": "Work Experience",
-  "sections.education": "Education",
-  "sections.projects": "Projects",
-  "sections.contacts": "Contacts",
-  "work1.title": "Full-stack QA Engineer at ROSELTORG",
-  "work1.description": "Reviewed product requirement documents and functional specifications. Implemented and maintained automated E2E and integration tests. Demonstrated teamwork by promoting ideas, helping other team members grow their skills.",
-  "work1.start_date": "11.2019",
-  "work1.end_date": "08.2023",
-  "work2.title": "System Engineer at INFORMATION TECHNOLOGY CENTER OF THE CHUVASH REPUBLIC",
-  "work2.description": "Provided the operation of telecommunications and computer equipment for the executive authorities and local self-government of the Chuvash Republic.",
-  "work2.start_date": "11.2018",
-  "work2.end_date": "11.2019",
-  "project1.title": "ClickUp",
-  "project1.short_description": "Cross-platform service for productivity team-working",
-  "project1.description": "Cross-platform service for productivity team-working. Technologies: Allure, Selenoid, TeamCity.",
-  "contact.github.title": "GitHub",
-  "ongoing": "Present",
-  "buttons.more": "More",
-  "buttons.close": "Close"
+  "about": {
+    "description": "Get To Know More",
+    "title": "About Me",
+    "experience": {
+      "title": "Experience",
+      "description": "6+ years<br/>Full-stack QA Engineer"
+    },
+    "education": {
+      "title": "Education",
+      "description": "<b>M.Sc.:</b> Applied Mathematics & Computer Science<br/><b>B.Sc.:</b> Computer Information Systems & Database Management"
+    },
+    "summary": "Over 6 years of experience in e-procurement testing. I have expertise in manual testing and automation of UI and API, plus configuring processes in CI/CD. I enjoy watching testing conference videos and am eager and prepared to gain new experiences and knowledge."
+  },
+  "experience": {
+    "description": "Explore My",
+    "title": "Work Experience",
+    "in": "в",
+    "ongoing": "present",
+    "works": {
+      "0": {
+        "position": "System Engineer",
+        "company": "\"INFORMATION TECHNOLOGY CENTER\" OF THE CHUVASH REPUBLIC",
+        "description": "Provided the operation of telecommunications and computer equipment for the executive authorities and local self-government of the Chuvash Republic."
+      },
+      "1": {
+        "position": "Full-stack QA Engineer",
+        "company": "ROSELTORG",
+        "description": "Reviewed product requirement documents and functional specifications. Conducted functional testing of the web-application for B2B and B2C in the e-procurement industry. Implemented and maintained manual and automated E2E and integration tests. Demonstrated teamwork by promoting ideas, helping other team members grow their skills."
+      },
+      "2": {
+        "position": "QA Automation Engineer",
+        "company": "NDA",
+        "description": "Text"
+      }
+    }
+  },
+  "projects": {
+    "description": "Посмотри Мои",
+    "title": "Проекты",
+    "buttons": {
+      "site": "Сайт",
+      "github": "GitHub",
+      "github-actions": "GitHub Actions",
+      "allure-reports": "Все Allure отчеты",
+      "allure-report-example": "Посмотреть Allure отчет"
+    },
+    "project_info": {
+      "0": {
+        "title": "Rococo",
+        "short_description": "A microservice-based virtual gallery where users can add artists, museums and paintings. Stack: Spring Boot, REST API, gRPC, Kafka, Selenide, Retrofit, PostgreSQL. Implemented DB, gRPC, API, UI, Kafka autotests and including JUnit Extensions. CI/CD via GitHub Actions.",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.  \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.  \n\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   \n\nAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.  \n\nConsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.  \n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.  \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.  \n\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  \n\nDuis autem vel eum iriure dolor in"
+      },
+      "1": {
+        "title": "Bank",
+        "short_description": "A microservices-based system for financial operations and currency exchange rate retrieval. Stack: Java 21, Kafka, OpenFeign, Swagger, Jackson. Includes Gateway (REST/Kafka), Currency (external API integration), Payment (entity creation), and module with automation Kafka tests.",
+        "description": "Кроссплатформенный сервис для работы команд"
+      },
+      "2": {
+        "title": "Online Store",
+        "short_description": "Automated UI/API Tests for automationexercise.com. Stack: Java 21, Playwright, RestAssured, Allure, Docker. Includes Dockerized execution, Allure reports, and JUnit 5 extensions.",
+        "description": "Кроссплатформенный сервис для работы команд"
+      },
+      "3": {
+        "title": "Online Store (Python)",
+        "short_description": "Automated UI/API Tests for automationexercise.com. Stack: Python 3.13, Pytest, Selene, Httpx, Allure, Docker. Includes Dockerized execution, Allure reports, pytest hooks and fixtures.",
+        "description": "Кроссплатформенный сервис для работы команд"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Contact Me",
+    "description": "Get in Touch",
+    "telegram": "Telegram",
+    "email": "Email"
+  },
+  "buttons": {
+    "more": "More",
+    "close": "Close"
+  },
+  "copyright": "Copyright © 2026 Romanov Dmitriy. All Rights Reserved."
 }

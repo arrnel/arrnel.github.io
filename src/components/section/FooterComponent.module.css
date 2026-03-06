@@ -1,0 +1,9 @@
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 3rem;
+    min-height: 3rem;
+    height: fit-content;
+}

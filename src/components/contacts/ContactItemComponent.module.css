@@ -1,0 +1,21 @@
+.contactInfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    max-height: 4rem;
+    width: fit-content;
+    color: var(--contrast-color)
+}
+
+a {
+    text-decoration: none;
+}
+
+.contactTitle {
+    max-height: 2rem;
+    font-size: var(--font-size-h4);
+    color: var(--contrast-color)
+}

@@ -1,0 +1,91 @@
+import {useTranslation} from 'react-i18next';
+import styles from './ProfileSectionContent.module.css';
+import type {Profile} from "../../model/Profile.ts";
+import {useCurrentLanguage} from "../../hook/useCurrentLanguage.ts";
+import {Section} from "../../model/Section.ts";
+
+const ProfileSectionContent: React.FC<{
+    profile: Profile;
+}> = ({ profile }) => {
+    const { t } = useTranslation();
+    const lang = useCurrentLanguage();
+
+    const handleContactClick = () => {
+        document.getElementById(Section.CONTACTS)?.scrollIntoView({
+            behavior: 'smooth',
+        });
+    };
+
+    const handleDownloadCV = () => {
+        window.open(`/assets/cv/cv_${lang}.pdf`, '_blank');
+    };
+
+    const handleSocialClick = (url: string) => {
+        window.open(url, '_blank');
+    };
+
+    return (
+        <div className={styles.profileContentContainer}>
+            {/* Profile Image */}
+            <div className={styles.profileImageContainer}>
+                <img
+                    src={profile.image.image}
+                    alt={t(profile.image.title)}
+                    data-test-id="profile-image"
+                />
+            </div>
+
+            {/* Profile Data */}
+            <div className={styles.profileData}>
+                <p className={styles.greeting} data-test-id="profile-greetings">
+                    {t('profile.greetings')}
+                </p>
+                <h1 className={styles.fullName} data-test-id="profile-fullname">
+                    {t('profile.fullname')}
+                </h1>
+                <h3 className={styles.position} data-test-id="profile-position">
+                    {t('profile.position')}
+                </h3>
+
+                {/* Buttons */}
+                <div className={styles.profileButtonContainer}>
+                    <button
+                        id={styles.cvBtn}
+                        className={`btn ${styles.profileButton} ${styles.btn1}`}
+                        data-test-id="download-cv"
+                        onClick={handleDownloadCV}
+                    >
+                        {t('profile.buttons.cv')}
+                    </button>
+                    <button
+                        className={`btn ${styles.profileButton} ${styles.btn2}`}
+                        data-test-id="contact-nav"
+                        onClick={handleContactClick}
+                    >
+                        {t('profile.buttons.contact')}
+                    </button>
+                </div>
+
+                {/* Socials */}
+                <div className={styles.socialButtonContainer}>
+                    {profile.socials.map((contact, idx) => (
+                        <button
+                            key={idx}
+                            className={`btn ${styles.socialButtonContainer}`}
+                            onClick={() => handleSocialClick(contact.url)}
+                        >
+                            <img
+                                src={contact.image}
+                                alt={`${contact.title} icon`}
+                                className="icon"
+                                data-test-id={`social-button-${contact.title}`}
+                            />
+                        </button>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ProfileSectionContent;

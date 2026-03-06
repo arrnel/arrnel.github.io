@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 17vh;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: var(--font-size-logo);
+    color: var(--contrast-color);
+}
+
+.navContainer {
+    display: flex;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.controlsContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 2rem;
+}

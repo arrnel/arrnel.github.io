@@ -1,0 +1,93 @@
+:root {
+    --font-size-markdown-h1: 3rem;
+    --font-size-markdown-h2: 2rem;
+    --font-size-markdown-h3: 1.5rem;
+    --font-size-markdown-h4: 1.2rem;
+    --font-size-markdown-text: 1rem;
+    --font-size-markdown-code: 0.95rem;
+
+    --plain-code-bg: #cfcfcf;
+    --plain-code-color: #424242;
+    --plain-code-border: 0.05rem solid;
+    --plain-code-font-weight: 500;
+
+    --block-code-bg: rgb(202, 202, 202);
+    --block-code-border: 0.05rem solid;
+
+    --link-bg: rgb(128, 172, 255);
+    --link-color: #373737;
+}
+
+body.dark {
+    --plain-code-bg: #3e3e3e;
+    --plain-code-color: #bfbfbf;
+
+    --block-code-bg: #3e3e3e;
+}
+
+.markdownContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.markdownContainer a {
+    background-color: var(--link-bg);
+    color: var(--link-color);
+}
+
+.markdownContainer h1 {
+    font-size: var(--font-size-markdown-h1);
+    margin-top: 1rem;
+}
+
+.markdownContainer h2 {
+    font-size: var(--font-size-markdown-h2);
+    margin-top: 0.8rem;
+}
+
+.markdownContainer h3 {
+    font-size: var(--font-size-markdown-h3);
+    margin-top: 0.6rem;
+}
+
+.markdownContainer h4 {
+    font-size: var(--font-size-markdown-h4);
+    margin-top: 0.4rem;
+}
+
+.markdownContainer p,
+.markdownContainer li {
+    font-size: var(--font-size-markdown-text);
+}
+
+.markdownContainer ul,
+.markdownContainer ol {
+    padding-left: 2rem;
+    font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
+}
+
+.markdownContainer li > code,
+.markdownContainer p > code {
+    background-color: var(--plain-code-bg);
+    color: var(--plain-code-color);
+    padding: 0.06rem 0.4rem;
+    border: var(--plain-code-border);
+    border-radius: 0.5rem;
+    font-size: var(--font-size-markdown-code);
+    font-weight: var(--plain-code-font-weight);
+}
+
+.markdownContainer pre:has(> code) {
+    padding: 1rem;
+    background-color: var(--block-code-bg);
+    border: var(--block-code-border);
+    border-radius: 1rem;
+}
+
+.markdownContainer li > code,
+.markdownContainer p > code,
+.markdownContainer a {
+    border: var(--block-code-border);
+    border-radius: 1rem;
+    padding: 0.06rem 0.4rem;
+}

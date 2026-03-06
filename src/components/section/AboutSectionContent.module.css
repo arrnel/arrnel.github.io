@@ -1,0 +1,26 @@
+.aboutSectionContentWrapper {
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.aboutPic {
+    max-width: var(--image-width);
+    border-radius: var(--image-border-radius-medium);
+}
+
+.aboutInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    gap: 3rem;
+}
+
+.aboutDetailContainers {
+    display: flex;
+    gap: 2rem;
+}

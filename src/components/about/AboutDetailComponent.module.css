@@ -1,0 +1,10 @@
+.detailContainer {
+    padding: 1.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    border: var(--contrast-color) 0.1rem solid;
+}
+
+.icon {
+    max-width: var(--icon-width-small);
+}
