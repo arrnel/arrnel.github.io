@@ -6,5 +6,6 @@ export interface Project {
   short_description: string;
   description: ModifiedText;
   skills: Link[];
+  logo: string;
   images: string[];
 }

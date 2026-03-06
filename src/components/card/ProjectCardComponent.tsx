@@ -14,7 +14,7 @@ const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
             <div className={styles.projectCard}>
                 <h3 className={styles.projectTitle}>{t(project.title)}</h3>
                 <p>{t(project.short_description)}</p>
-                <img src={project.images[0]} alt={t(project.title)}/>
+                <img src={project.logo} alt={t(project.title)}/>
                 <button className={styles.moreButton} onClick={() => setIsOpen(true)}>
                     {t('buttons.more')}
                 </button>
