@@ -27,6 +27,10 @@ export const PROJECTS_DATA: Project[] = [
         logo: "/assets/project/rococo/logo.png",
         images: [
             "/assets/project/rococo/site.png",
+            "/assets/project/rococo/github_actions.png",
+            "/assets/project/rococo/test_runs.png",
+            "/assets/project/rococo/allure_report_example.png",
+            "/assets/project/rococo/pull_request_message.png",
         ],
     },
     {
