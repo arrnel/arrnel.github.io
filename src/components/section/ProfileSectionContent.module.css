@@ -15,8 +15,8 @@
     display: flex;
     justify-self: center;
     align-self: center;
-    max-width: var(--image-width);
-    max-height: var(--image-width);
+    min-width: var(--min-image-width);
+    max-width: var(--max-image-width);
 }
 
 .profileImageContainer img {

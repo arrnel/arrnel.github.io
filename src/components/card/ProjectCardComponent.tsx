@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import type {Project} from '../../model/Project.ts';
 import ModalComponent from "../modal/base/ModalComponent.tsx";
-import ProjectModalComponent from "../modal/ProjectModalComponent.tsx";
 import styles from "./ProjectCardComponent.module.css";
+import ProjectModalComponent from "../modal/ProjectModalComponent.tsx";
 
 const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
     const {t} = useTranslation();

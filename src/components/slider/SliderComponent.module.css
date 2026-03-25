@@ -1,8 +1,3 @@
-/* ============================================= */
-/* ImageSliderComponent.module.css — ПОЛНАЯ ВЕРСИЯ */
-/* Адаптировано под embla-carousel-react (slide + drag) */
-/* ============================================= */
-
 .sliderWrapper {
     display: block;
     position: relative;
@@ -11,42 +6,35 @@
     overflow: hidden;
     background: var(--card-bg);
     max-height: 80vh;
-    touch-action: pan-y; /* улучшает swipe на мобильных */
 }
 
-/* === Embla Carousel (viewport) === */
-.embla {
-    height: 100%;
+.images {
+    display: block;
+    height: 90%;
     width: 100%;
-    overflow: hidden;
+
 }
 
-.embla__container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    /* Embla сам добавляет transform и transition */
+.images img{
+    max-height: 100%;
 }
 
-.embla__slide {
-    flex: 0 0 100%;           /* каждый слайд = 100% ширины */
-    min-width: 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Изображение внутри слайда */
 .sliderImage {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;      /* как было в старой версии */
-    /* opacity + transition убраны — Embla сам анимирует слайд */
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.55s ease-in-out;
+    border-radius: var(--border-radius-medium);
 }
 
-/* === Стрелки (полностью как было) === */
+.sliderImage.active {
+    opacity: 1;
+}
+
 .sliderArrow {
     position: absolute;
     top: 50%;
@@ -68,8 +56,8 @@
     z-index: 10;
 }
 
-.sliderWrapper:hover .sliderArrow,
-.sliderWrapper:focus-within .sliderArrow {
+.sliderContainer:hover .sliderArrow,
+.sliderContainer:focus-within .sliderArrow {
     opacity: 0.85;
 }
 
@@ -88,7 +76,6 @@
     right: 16px;
 }
 
-/* === Точки (полностью как было) === */
 .sliderDots {
     display: flex;
     position: absolute;
@@ -122,9 +109,6 @@
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.22);
 }
 
-/* ============================================= */
-/* Мобильная адаптация (полностью как было) */
-/* ============================================= */
 @media (max-width: 640px) {
     .sliderArrow {
         width: 40px;
@@ -154,11 +138,3 @@
         transform: scale(1.35);
     }
 }
-
-/* ============================================= */
-/* УДАЛЕНО: */
-/* - .images { ... } */
-/* - .images img { ... } */
-/* - .sliderImage.active { ... } */
-/* - .sliderContainer:hover (заменено на .sliderWrapper:hover) */
-/* ============================================= */

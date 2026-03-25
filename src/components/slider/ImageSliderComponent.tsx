@@ -1,111 +1,126 @@
-import React, {useState} from 'react';
-import {useTranslation} from 'react-i18next';
+import React, { useCallback, useEffect, useState } from 'react';
 import styles from './ImageSliderComponent.module.css';
+import { useTranslation } from 'react-i18next';
+import useEmblaCarousel from 'embla-carousel-react';
+import type { EmblaCarouselType } from 'embla-carousel';
 
 interface ImageSliderProps {
     images: string[];
-    projectTitleKey: string;
+    title: string;
     aspectRatio?: string;
+    className?: string;
 }
 
-const ImageSlider: React.FC<ImageSliderProps> = ({
-                                                     images,
-                                                     projectTitleKey,
-                                                     aspectRatio = '1 / 1',
-                                                 }) => {
-    const {t} = useTranslation();
+const ImageSliderComponent: React.FC<ImageSliderProps> = ({
+    images,
+    title,
+    aspectRatio,
+    className = '',
+}) => {
+    const { t } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const [emblaRef, emblaApi] = useEmblaCarousel({
+        loop: true,           // бесконечная прокрутка (как было в старой версии)
+        align: 'center',      // центрирование слайда
+        skipSnaps: false,
+        dragFree: false,      // чёткая остановка на слайде
+        containScroll: 'trimSnaps',
+    });
 
     if (images.length === 0) return null;
 
-    const nextImage = () => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-    };
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
 
-    const prevImage = () => {
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-    };
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
 
-    const goToImage = (index: number) => {
-        setCurrentIndex(index);
-    };
+    const scrollTo = useCallback((index: number) => {
+        if (emblaApi) emblaApi.scrollTo(index);
+    }, [emblaApi]);
 
-    const title = t(projectTitleKey);
-    const prevHint = t('slider.prev_image');
-    const nextHint = t('slider.next_image');
-    const goToHint = t('slider.navigate_to');
-    const currentHint = t('slider.current_image');
+    const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+        setCurrentIndex(emblaApi.selectedScrollSnap());
+    }, []);
+
+    useEffect(() => {
+        if (!emblaApi) return;
+
+        emblaApi.on('select', onSelect);
+        emblaApi.on('reInit', onSelect);
+
+        onSelect(emblaApi);
+
+        return () => {
+            emblaApi.off('select', onSelect);
+            emblaApi.off('reInit', onSelect);
+        };
+    }, [emblaApi, onSelect]);
+
+    const wrapperStyle = aspectRatio ? { aspectRatio } : undefined;
 
     return (
-        <div className={styles.sliderContainer}>
-            <div className={styles.sliderWrapper} style={{aspectRatio}}>
-                {images.map((src, idx) => {
-                    const isActive = idx === currentIndex;
-                    return (
-                        <img
-                            key={src}
-                            src={src}
-                            alt={`${title} — ${idx + 1}`}
-                            className={`${styles.sliderImage} ${isActive ? styles.active : ''}`}
-                            loading={idx === 0 ? 'eager' : 'lazy'}
-                            fetchPriority={idx === 0 ? 'high' : 'low'}
-                            decoding="async"
-                            id={`slide-${idx}`}
-                        />
-                    );
-                })}
-
-                {images.length > 1 && (
-                    <>
-                        <button
-                            type="button"
-                            className={`${styles.sliderArrow} ${styles.sliderArrowPrev}`}
-                            onClick={prevImage}
-                            aria-label={prevHint}
-                        >
-                            ←
-                        </button>
-
-                        <button
-                            type="button"
-                            className={`${styles.sliderArrow} ${styles.sliderArrowNext}`}
-                            onClick={nextImage}
-                            aria-label={nextHint}
-                        >
-                            →
-                        </button>
-
+        <div
+            className={`${styles.sliderWrapper} ${className}`}
+            style={wrapperStyle}
+        >
+            <div className={styles.embla} ref={emblaRef}>
+                <div className={styles.embla__container}>
+                    {images.map((src, idx) => (
                         <div
-                            className={styles.sliderDots}
-                            role="tablist"
-                            aria-label={t('slider.image_navigation')}
+                            key={src}
+                            className={styles.embla__slide}
                         >
-                            {images.map((_, idx) => {
-                                const isActive = idx === currentIndex;
-                                return (
-                                    <button
-                                        key={idx}
-                                        type="button"
-                                        role="tab"
-                                        tabIndex={isActive ? 0 : -1}
-                                        aria-selected={isActive}
-                                        aria-controls={`slide-${idx}`}
-                                        aria-label={
-                                            isActive
-                                                ? `${goToHint} ${idx + 1} (${currentHint})`
-                                                : `${goToHint} ${idx + 1}`
-                                        }
-                                        className={`${styles.sliderDot} ${isActive ? styles.active : ''}`}
-                                        onClick={() => goToImage(idx)}
-                                    />
-                                );
-                            })}
+                            <img
+                                src={src}
+                                alt={`${title} — ${idx + 1}`}
+                                className={styles.sliderImage}
+                                loading={idx === 0 ? 'eager' : 'lazy'}
+                                fetchPriority={idx === 0 ? 'high' : 'low'}
+                                decoding="async"
+                            />
                         </div>
-                    </>
-                )}
+                    ))}
+                </div>
             </div>
+
+            {images.length > 1 && (
+                <>
+                    <button
+                        type="button"
+                        className={`${styles.sliderArrow} ${styles.sliderArrowPrev}`}
+                        onClick={scrollPrev}
+                        aria-label={t('slider.prev_image')}
+                    >
+                        ←
+                    </button>
+                    <button
+                        type="button"
+                        className={`${styles.sliderArrow} ${styles.sliderArrowNext}`}
+                        onClick={scrollNext}
+                        aria-label={t('slider.next_image')}
+                    >
+                        →
+                    </button>
+
+                    <div className={styles.sliderDots} role="tablist">
+                        {images.map((_, idx) => (
+                            <button
+                                key={idx}
+                                type="button"
+                                className={`${styles.sliderDot} ${idx === currentIndex ? styles.active : ''}`}
+                                onClick={() => scrollTo(idx)}
+                                aria-label={`Перейти к изображению ${idx + 1}`}
+                            />
+                        ))}
+                    </div>
+                </>
+            )}
         </div>
     );
 };
 
-export default ImageSlider;
+export default ImageSliderComponent;

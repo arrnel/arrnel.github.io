@@ -54,7 +54,7 @@ const ModalComponent: React.FC<ModalProps> = ({
     return createPortal(
         <div className={styles.modalOverlay}
              onClick={handleOverlayClick}
-             onWheelCapture={handleWheelCapture} // Перехватываем событие на этапе capture
+             onWheelCapture={handleWheelCapture}
              data-test-id="modal-overlay"
         >
             <div ref={modalContentRef}

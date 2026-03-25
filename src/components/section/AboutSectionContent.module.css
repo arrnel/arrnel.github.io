@@ -8,8 +8,14 @@
     gap: 3rem;
 }
 
+.aboutImageContainer {
+    min-width: var(--min-image-width);
+    max-width: var(--max-image-width);
+}
+
 .aboutPic {
-    max-width: var(--image-width);
+    height: 100%;
+    width: 100%;
     border-radius: var(--image-border-radius-medium);
 }
 
