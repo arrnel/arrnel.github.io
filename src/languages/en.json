@@ -58,14 +58,14 @@
     }
   },
   "projects": {
-    "description": "Посмотри Мои",
-    "title": "Проекты",
+    "description": "Browse My",
+    "title": "Projects",
     "buttons": {
-      "site": "Сайт",
+      "site": "Site",
       "github": "GitHub",
       "github-actions": "GitHub Actions",
-      "allure-reports": "Все Allure отчеты",
-      "allure-report-example": "Посмотреть Allure отчет"
+      "allure-reports": "All Allure Reports",
+      "allure-report-example": "Allure Report Example"
     },
     "project_info": {
       "0": {
