@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import styles from './ImageSliderComponent.module.css';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 import useEmblaCarousel from 'embla-carousel-react';
-import type { EmblaCarouselType } from 'embla-carousel';
+import type {EmblaCarouselType} from 'embla-carousel';
 
 interface ImageSliderProps {
     images: string[];
@@ -17,14 +17,14 @@ const ImageSliderComponent: React.FC<ImageSliderProps> = ({
     aspectRatio,
     className = '',
 }) => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: true,           // бесконечная прокрутка (как было в старой версии)
-        align: 'center',      // центрирование слайда
+        loop: true,
+        align: 'center',
         skipSnaps: false,
-        dragFree: false,      // чёткая остановка на слайде
+        dragFree: false,
         containScroll: 'trimSnaps',
     });
 
@@ -60,7 +60,7 @@ const ImageSliderComponent: React.FC<ImageSliderProps> = ({
         };
     }, [emblaApi, onSelect]);
 
-    const wrapperStyle = aspectRatio ? { aspectRatio } : undefined;
+    const wrapperStyle = aspectRatio ? {aspectRatio} : undefined;
 
     return (
         <div
@@ -113,7 +113,7 @@ const ImageSliderComponent: React.FC<ImageSliderProps> = ({
                                 type="button"
                                 className={`${styles.sliderDot} ${idx === currentIndex ? styles.active : ''}`}
                                 onClick={() => scrollTo(idx)}
-                                aria-label={`Перейти к изображению ${idx + 1}`}
+                                aria-label={`${t('slider.dot_nav')}: ${idx + 1}}`}
                             />
                         ))}
                     </div>
