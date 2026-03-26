@@ -20,6 +20,7 @@
     flex-direction: column;
     gap: 2rem;
     max-width: 50%;
+    max-height: 60vh;
 }
 
 .projectFormDescriptionContainer {
@@ -95,7 +96,7 @@
 .projectModalContent .imageSliderContainer {
     text-align: center;
     min-height: 300px;
-    height: 50%;
+    height: 60%;
 }
 
 .verticalProjectModalContent .imageSliderContainer {
@@ -109,7 +110,7 @@
     display: inline-flex;
     position: absolute;
     top: 65px;
-    left: 190px;
+    left: 65px;
     background-color: var(--card-bg);
     border: 1px solid var(--contrast-color);
     border-radius: var(--image-border-radius-medium);
@@ -117,11 +118,12 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
     cursor: pointer;
     align-self: center;
-    opacity: 0.4;
+    opacity: 0.35;
 }
 
-.layoutSwitcher:hover{
-    opacity: 0.9;
+.layoutSwitcher:hover,
+.layoutSwitcher:focus-visible  {
+    opacity: 0.85;
 }
 
 .switchOption {
