@@ -3,6 +3,7 @@
     flex: 1;
     border-radius: 2rem;
     border: var(--contrast-color) 0.1rem solid;
+    background: var(--card-bg);
 }
 
 .icon {

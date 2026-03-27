@@ -1,7 +1,7 @@
 :root {
     --bg-color: #fff;
     --text-color: #222;
-    --card-bg: rgb(239, 239, 239);
+    --card-bg: rgb(250, 250, 250);
     --contrast-color: #1e1e1e;
     --accent-color: #007acc;
     --position-color: #5e5e5e;
@@ -44,7 +44,7 @@
 body.dark {
     --bg-color: #1e1e1e;
     --text-color: #f0f0f0;
-    --card-bg: #393939;
+    --card-bg: #282828;
     --accent-color: #569cd6;
     --contrast-color: #f9f9f9;
     --position-color: #9f9f9f;
