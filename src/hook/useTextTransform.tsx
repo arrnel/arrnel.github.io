@@ -19,7 +19,7 @@ export const useTextTransform = () => {
         } else if (text instanceof FormatTranslateCode) {
             return parse(t(text.value));
         } else if (text instanceof MarkdownTranslateCode) {
-            return renderToString(parse(t(text.value))).replaceAll(/(?<=\n\n)(?![*-])\n/gi, "&nbsp;\n ");
+            return renderToString(parse(t(text.value)));
         } else {
             throw new TypeError("Unknown instance of text variable: " + text.getSimpleName());
         }

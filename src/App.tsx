@@ -15,6 +15,7 @@ import SectionTitleComponent from "./components/section/SectionTitleComponent.ts
 import {useTranslation} from "react-i18next";
 import ProfileSectionContent from "./components/section/ProfileSectionContent.tsx";
 import {Section} from "./model/Section.ts";
+import './i18n';
 
 const App: React.FC = () => {
 

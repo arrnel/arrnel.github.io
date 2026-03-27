@@ -1,11 +1,10 @@
 import React from 'react';
-import { changeLanguage } from '../../i18n.ts';
+import i18n, {changeLanguage} from '../../i18n.ts';
 import styles from './LanguageSwitcher.module.css';
-import {useCurrentLanguage} from "../../hook/useCurrentLanguage.ts";
 
 const LanguageSelectComponent: React.FC = () => {
 
-  const currentLang = useCurrentLanguage();
+  const currentLang = i18n.language;
 
   const languages = {
     en: 'ENG',

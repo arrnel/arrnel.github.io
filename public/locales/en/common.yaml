@@ -1,0 +1,275 @@
+nav:
+  profile: Profile
+  about: About
+  experience: Experience
+  projects: Projects
+  contacts: Contacts
+profile:
+  profile_image: Profile image
+  greetings: Hi! I'm
+  fullname: Romanov Dmitriy
+  position: QA Automation Engineer
+  buttons:
+    cv: Download CV
+    contact: Contact
+  social:
+    telegram: Telegram
+    linkedin: Linkedin
+    github: GitHub
+about:
+  description: Get To Know More
+  title: About Me
+  experience:
+    title: Experience
+    description: 6+ years<br/>Full-stack QA Engineer
+  education:
+    title: Education
+    description: |
+      <b>M.Sc.:</b> Applied Mathematics & Computer Science<br/>
+      <b>B.Sc.:</b> Computer Information Systems & Database Management
+  summary: |
+    Over 6 years of experience in e-procurement testing. I have expertise in manual testing and automation of UI and API,
+    plus configuring processes in CI/CD. I enjoy watching testing conference videos and am eager and prepared to gain new experiences and knowledge.
+experience:
+  description: Explore My
+  title: Work Experience
+  in: в
+  ongoing: present
+  works:
+    '0':
+      position: System Engineer
+      company: '"INFORMATION TECHNOLOGY CENTER" OF THE CHUVASH REPUBLIC'
+      description: |
+        Provided the operation of telecommunications and computer equipment
+        for the executive authorities and local self-government of the Chuvash Republic.
+    '1':
+      position: Full-stack QA Engineer
+      company: ROSELTORG
+      description: |
+        Reviewed product requirement documents and functional specifications.
+        Conducted functional testing of the web-application for B2B and B2C in the
+        e-procurement industry. Implemented and maintained manual and automated E2E
+        and integration tests. Demonstrated teamwork by promoting ideas, helping other
+        team members grow their skills.
+    '2':
+      position: QA Automation Engineer
+      company: NDA
+      description: Text
+projects:
+  description: Browse My
+  title: Projects
+  buttons:
+    site: Site
+    github: GitHub
+    github-actions: GitHub Actions
+    allure-reports: All Allure Reports
+    allure-report-example: Allure Report Example
+  project_info:
+    '0':
+      title: Rococo (Java)
+      short_description: |
+        A microservice-based virtual gallery where users can add artists, museums and paintings.
+        Stack: Spring Boot, REST API, gRPC, Kafka, Selenide, Retrofit, PostgreSQL.
+        Implemented DB, gRPC, API, UI, Kafka autotests and including JUnit Extensions. CI/CD via GitHub Actions.
+      description: |
+        **Rococo** is a project that represents a virtual gallery built on a microservice architecture.
+        Users can add artists, museums, and paintings. The project is rich with modern Java stack technologies and
+        tools for test automation and CI/CD.
+        
+        ## 🛠️ **Architecture & Technologies**
+        * **Backend**: Java 21, Gradle, Spring Boot (Hibernate, REST, gRPC, Apache Kafka)
+        * **Infrastructure**: Docker
+        * **Databases**: PostgreSQL
+        * **Testing**: Java 21, Gradle, JUnit 5, Spring-JDBC, gRPC, Kafka, Retrofit 2, Selenide, Selenoid, Allure
+        
+        ## 🧩 **Services**
+        * **Auth** - user registration and authorization
+        * **Gateway** - routing
+        * **Artists** - artists management
+        * **Countries** - countries management
+        * **Files** - image management
+        * **Museums** - museums management
+        * **Paintings** - paintings management
+        * **Users** - user management
+        * **Logs** - logs (for storing and later attaching logs to Allure Reports)
+        * **Frontend** - client application
+        
+        ## 💻 **What's Implemented**
+        1) **Backend** - All services are fully coded, including `unit` and `integration` tests (over 250 tests)
+        2) **Testing** - Over 250 tests have been written for the `database`, `gRPC` service integration, `REST` APIs,
+        `Kafka`, as well as `UI` and `Screenshot` tests, utilizing `JUnit 5 (Extensions, Resolvers)`
+        3) **Environment** - Dockerization of the frontend, backend, and tests
+        4) **CI/CD** - A GitHub Action workflow is written to run tests on pull requests, with informative test result
+        messages posted directly in the pull request
+        
+        ## 🚀 **Running the Project**
+        Convenient test execution is implemented for different environments: `local`, `docker`, `ci`
+        
+        ### Prerequisites:
+        1) Docker, Java 21, and npm must be installed locally.
+        2) Generate a PAT token in GitHub and set the required environment variables `GITHUB_TOKEN_NAME` and `GITHUB_TOKEN` with read permissions for issues.
+        
+        ### Detailed Launch Instructions:
+        1) Locally: [Link to detailed information](https://github.com/arrnel/rococo?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-rococo-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B2-ide)
+        2) In Docker: [Link to detailed information](https://github.com/arrnel/rococo?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        3) In CI (GitHub Actions):  
+          a) Fork the repository (if you haven't already)  
+          b) In the repository settings, add the necessary secrets and environment variables (`Settings` -> `Secrets and variables` -> `Actions`)  
+          c) In the navigation, go to the `Actions` section and select the desired action, e.g., `Nightly run`  
+          d) Run the workflow  
+        
+        ## 👉 More Details
+        More information is available in the [original README](https://github.com/arrnel/rococo)
+    '1':
+      title: Bank (Java)
+      short_description: |
+        A microservices-based system for financial operations and currency exchange rate retrieval.
+        Stack: Java 21, Kafka, OpenFeign, Swagger, Jackson. 
+        Includes Gateway (REST/Kafka), Currency (external API integration), Payment (entity creation), and module with automation Kafka tests.
+      description: |
+        **Bank** is a project that represents a multicurrency payment
+        service built on a microservice architecture. Users can create bank accounts,
+        currency wallets, perform deposits, transfers, debits, and partial/full refunds.
+        The project is rich in modern Java stack technologies and tools for test automation
+        and CI/CD.
+        
+        ## 🛠️ Architecture and Technologies
+        * **Backend**: Java 21, Gradle, Spring Boot (Hibernate, OpenFeign, Apache Kafka, Validation, OpenAPI)
+        * **Infrastructure**: Docker
+        * **Databases**: PostgreSQL
+        * **Testing**: Java 21, Gradle, JUnit 5, Kafka
+        
+        ## 🧩 **Services**
+        * **Currency** - service for fetching and storing currencies
+        * **Payment** - bank accounts, currency wallets, transactions (refunds)\n
+        * **Gateway** - routing
+        
+        ## 💻 **What has been implemented in the project?**
+        1) **Backend** - developed microservices with integration via both REST and Kafka
+        2) **Testing** - developed automated tests for verifying Kafka integration of the payment service
+        3) **Environment** - building backend and tests in Docker
+        4) **CI/CD** - created a workflow for running tests in GitHub Actions on pull requests with an informative
+        message about the test results within the pull request itself
+        
+        ## 🚀 Running the Project
+        Convenient test execution in different environments: `local`, `docker` has been implemented.
+        
+        ### Prerequisites:
+        1) Docker and Java 21 must be installed locally
+        2) Set the required environment variables
+        
+        ### Detailed launch instructions:
+        1) Locally: [Link to detailed information](https://github.com/arrnel/bank?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-rococo-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B2-ide)
+        2) In Docker: [Link to detailed information](https://github.com/arrnel/bank?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        3) In CI (GitHub Actions):  
+          a) Fork the repository (if you haven't already)  
+          b) In the repository settings, add the necessary secrets and environment variables (`Settings` -> `Secrets and variables` -> `Actions`)  
+          c) In the navigation, go to the `Actions` section and select the desired action, e.g., `Nightly run`  
+          d) Run the workflow  
+        
+        ## 👉 More Details
+        More information is available in the [original README](https://github.com/arrnel/bank)
+    '2':
+      title: Online Store (Java)
+      short_description: |
+        Automated UI/API Tests for automationexercise.com. Stack: Java 21, Playwright, RestAssured, Allure, Docker.
+        Includes Dockerized execution, Allure reports, and JUnit 5 extensions.
+      description: |
+        **AutomationExercise (Java)** is a test automation framework for the online store
+        [automationexercise.com](https://automationexercise.com), built with Java. The project covers UI and API
+        functionality: catalog, cart, checkout, registration, etc. It features flexible configuration for different
+        environments and integration with a bug tracking system (GitHub Issues).
+        
+        ## 🛠️ **Technologies & Tools**
+        * **Language & Build**: Java 21, Gradle
+        * **Test Runner**: JUnit 5
+        * **Testing**: RestAssured, Playwright
+        * **Reporting**: Allure
+        * **Infrastructure**: Docker, Playwright (built-in browsers)
+        * **Integration**: GitHub API (for working with Issues)
+        
+        ## 💻 **What's Implemented**
+        1) **UI and API Tests** — covering main user scenarios
+        2) **Screenshot Tests** — visual page comparison to detect regressions (with support for Chromium, Firefox, WebKit browsers)
+        3) **Flexible Configuration** — switching between `local`, `docker`, and `ci` environments via environment variables
+        4) **GitHub Issues Integration** — automatic test disabling (`@DisabledByIssue`) if the corresponding bug is still open
+        5) **Allure Reports** — detailed test execution information with attached screenshots and videos
+        
+        ## 🚀 **Running the Project**
+        
+        ### Prerequisites:
+        1) Install Java 21 and Docker (for containerized execution)
+        2) Create copies of the screenshot folder: `src/.screen-output/screenshots/remote` → `local` and `docker` (for correct `screenshot` test operation)
+        3) On the first run, set the `TEST_REWRITE_ALL_SCREENSHOTS=true` variable to create reference screenshots
+        4) Generate a PAT token in GitHub (with read permissions for issues) and set the environment variables `GITHUB_TOKEN`, `GITHUB_TOKEN_NAME`, `GITHUB_ACCOUNT_NAME`, `GITHUB_REPO_NAME`
+        
+        ### Execution Methods:
+        1) Locally: [Link to detailed information](https://github.com/arrnel/automation-exercise/blob/master/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-ide)
+        2) In Docker: [Link to detailed information](https://github.com/arrnel/automation-exercise/blob/master/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        3) In CI (GitHub Actions):  
+          a) Fork the repository (if you haven't already)  
+          b) In the repository settings, add the necessary secrets and environment variables (`Settings` -> `Secrets and variables` -> `Actions`)  
+          c) In the navigation, go to the `Actions` section and select the desired action, e.g., `Nightly run`  
+          d) Run the workflow
+        
+        ## 👉 **More Details**
+        More information is available in the [original README](https://github.com/arrnel/automation-exercise)
+    '3':
+      title: Online Store (Python)
+      short_description: |
+        Automated UI/API Tests for automationexercise.com.
+        Stack: Python 3.13, Pytest, Selene, Httpx, Allure, Docker.
+        Includes Dockerized execution, Allure reports, pytest hooks and fixtures.
+      description: |
+        **AutomationExercise (Python)** is a test automation framework for the online store
+        [automationexercise.com](https://automationexercise.com), built with Python. The project covers UI and API
+        functionality: catalog, cart, checkout, registration, etc. It features flexible configuration for different
+        environments.
+        
+        ## 🛠️ **Technologies & Tools**
+        * **Language & Dependencies**: Python 3.13, Poetry
+        * **Test Runner**: Pytest
+        * **Configuration**: Pydantic v2
+        * **Testing**: Httpx, Selene
+        * **Reporting**: Allure
+        * **Infrastructure**: Docker, Selenoid (remote browser execution)
+        
+        ## 💻 **What's Implemented**
+        1) **UI and API Tests** — covering main user scenarios
+        2) **Screenshot Tests** — visual page comparison to detect regressions
+        3) **Local and Remote Execution** — integration with Selenoid, video recording, and VNC access
+        4) **Flexible Configuration** — switching between `local`, `docker`, and `ci` environments via environment variables or `.env` files
+        5) **Allure Reports** — comprehensive test execution information with attached screenshots and videos
+        
+        ## 🚀 **Running the Project**
+        
+        ### Preconditions:
+        1) Install Python 3.13, Poetry, and allure-commandline (version 2.35.1 recommended)
+        2) Register a user on [automationexercise.com](https://automationexercise.com) and provide their details in the `.env` file
+        3) Generate a PAT token in GitHub (with read permissions for issues) and set the required environment variables
+        `GITHUB_TOKEN_NAME` and `GITHUB_TOKEN`
+        
+        ### Execution Methods:
+        1) Locally: [Link to detailed information](https://github.com/arrnel/automation-exercise-py?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-ide)
+        2) In Docker: [Link to detailed information](https://github.com/arrnel/automation-exercise-py?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        3) In CI (GitHub Actions):  
+          a) Fork the repository (if you haven't already)  
+          b) In the repository settings, add the necessary secrets and environment variables (`Settings` -> `Secrets and variables` -> `Actions`)   
+          c) In the navigation, go to the `Actions` section and select the desired action, e.g., `Nightly run`  
+          d) Run the workflow  
+        
+        ## 👉 **More Details**
+        More information is available in the [original README](https://github.com/arrnel/automation-exercise-py)
+contacts:
+  title: Contact Me
+  description: Get in Touch
+  telegram: Telegram
+  email: Email
+buttons:
+  more: More
+  close: Close
+slider:
+  prev: Previous slide
+  next: Next slide
+  dot_nav: Navigate to slide
+copyright: Copyright © 2026 Romanov Dmitriy. All Rights Reserved.

@@ -1,14 +1,14 @@
 import {useTranslation} from 'react-i18next';
 import styles from './ProfileSectionContent.module.css';
 import type {Profile} from "../../model/Profile.ts";
-import {useCurrentLanguage} from "../../hook/useCurrentLanguage.ts";
 import {Section} from "../../model/Section.ts";
+import i18n from "../../i18n.ts";
 
 const ProfileSectionContent: React.FC<{
     profile: Profile;
 }> = ({ profile }) => {
     const { t } = useTranslation();
-    const lang = useCurrentLanguage();
+    const lang = i18n.language;
 
     const handleContactClick = () => {
         document.getElementById(Section.CONTACTS)?.scrollIntoView({
