@@ -39,12 +39,21 @@ experience:
     '0':
       position: System Engineer
       company: '"INFORMATION TECHNOLOGY CENTER" OF THE CHUVASH REPUBLIC'
+      short_description: |
+        Provided the operation of telecommunications and computer equipment
+        for the executive authorities and local self-government of the Chuvash Republic.
       description: |
         Provided the operation of telecommunications and computer equipment
         for the executive authorities and local self-government of the Chuvash Republic.
     '1':
       position: Full-stack QA Engineer
       company: ROSELTORG
+      short_description: |
+        Reviewed product requirement documents and functional specifications.
+        Conducted functional testing of the web-application for B2B and B2C in the
+        e-procurement industry. Implemented and maintained manual and automated E2E
+        and integration tests. Demonstrated teamwork by promoting ideas, helping other
+        team members grow their skills.
       description: |
         Reviewed product requirement documents and functional specifications.
         Conducted functional testing of the web-application for B2B and B2C in the
@@ -54,6 +63,7 @@ experience:
     '2':
       position: QA Automation Engineer
       company: NDA
+      short_description: Text
       description: Text
 projects:
   description: Browse My
