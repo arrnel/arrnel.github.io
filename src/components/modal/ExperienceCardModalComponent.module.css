@@ -1,0 +1,144 @@
+.projectModalContainer {
+
+}
+
+.projectTitle {
+    text-align: center;
+}
+
+/* ====================== HORIZONTAL VIEW ====================== */
+.projectModalContent {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.projectFormInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50%;
+    max-height: 60vh;
+}
+
+.projectFormDescriptionContainer {
+    max-width: 50%;
+    max-height: 60vh;
+    text-align: justify;
+    overflow-y: auto;
+    padding-right: 1.5rem;
+}
+
+.projectFormButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 1rem;
+}
+
+/* ====================== VERTICAL VIEW ====================== */
+.verticalProjectModalContent {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    width: 100%;
+}
+
+.verticalProjectFormInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    max-height: 900px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.verticalProjectFormDescriptionContainer {
+    max-width: 80%;
+    text-align: justify;
+    overflow-y: auto;
+    padding-right: 1.5rem;
+}
+
+.verticalProjectFormButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* ====================== PROJECT LINKS ====================== */
+.projectButton {
+    background-color: var(--contrast-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: opacity var(--transition);
+}
+
+/* imageSliderContainer — разное поведение в зависимости от родителя */
+.imageSliderContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.projectModalContent .imageSliderContainer {
+    text-align: center;
+    min-height: 300px;
+    height: 60%;
+}
+
+.verticalProjectModalContent .imageSliderContainer {
+    max-height: 600px;
+    height: 600px;
+    width: 100%;
+}
+
+/* ====================== VIEW SWITCHER ====================== */
+.layoutSwitcher {
+    display: inline-flex;
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--contrast-color);
+    border-radius: var(--image-border-radius-medium);
+    padding: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    align-self: center;
+    opacity: 0.35;
+}
+
+.layoutSwitcher:hover,
+.layoutSwitcher:focus-visible  {
+    opacity: 0.85;
+}
+
+.switchOption {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--image-border-radius-small);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--contrast-color);
+}
+
+.switchOptionActive {
+    background-color: var(--contrast-color);
+    color: var(--bg-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

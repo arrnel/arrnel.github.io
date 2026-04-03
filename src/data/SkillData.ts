@@ -72,6 +72,11 @@ export const SKILLS: Record<string, ImageLink> = {
         url: "https://docs.oracle.com/javase/tutorial/jdbc/basics/gettingstarted.html",
         image: "/assets/skill/jdbc.svg"
     },
+    [Skill.SPRING_JDBC]: {
+        title: Skill.SPRING_JDBC,
+        url: "https://spring.io/projects/spring-data-jdbc",
+        image: "/assets/skill/jdbc.svg"
+    },
     [Skill.PYTHON]: {
         title: Skill.PYTHON,
         url: "https://docs.python.org/3.13/tutorial/index.html",

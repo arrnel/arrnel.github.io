@@ -46,3 +46,12 @@
 .projectCard button:hover {
     opacity: 0.9;
 }
+
+.projectCardModal {
+    max-width: 80%;
+    max-height: 75vh;
+}
+
+.moreButton {
+    margin-top: auto;
+}

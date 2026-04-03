@@ -1,5 +1,5 @@
 .experienceItem {
-    justify-self: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex: 1 1 47%;
@@ -31,9 +31,11 @@
 
 }
 
-.experienceDescription {
+.experienceShortDescription {
     flex: 1;
     margin-top: 0.5rem;
+    text-align: justify;
+    width: 100%;
 }
 
 .skillsContainer {
@@ -58,4 +60,27 @@
 
 .skillIcon {
     max-width: 48px;
+}
+
+.moreButton {
+    background-color: var(--contrast-color);
+    width: 95%;
+    min-height: 3rem;
+    color: var(--bg-color);
+    font-size: var(--font-size-section-description);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: opacity var(--transition);
+    margin-top: auto;
+}
+
+.moreButton:hover {
+    opacity: 0.9;
+}
+
+.experienceModal {
+    max-width: 50%;
+    max-height: 50%;
 }

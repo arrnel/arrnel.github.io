@@ -15,6 +15,7 @@ export class Skill {
     static readonly GRPC = "gRPC";
     static readonly HIBERNATE = "Hibernate";
     static readonly JDBC = "JDBC";
+    static readonly SPRING_JDBC = "Spring-JDBC";
 
     // ----- PYTHON
     static readonly PYTHON = "Python 3.1x";
@@ -26,11 +27,11 @@ export class Skill {
     // ----- COMMON
     static readonly ALLURE = "Allure";
     static readonly GIT = "Git";
-    static readonly GITHUB = "Github";
-    static readonly GITLAB = "Gitlab";
+    static readonly GITHUB = "GitHub";
+    static readonly GITLAB = "GitLab";
     static readonly SELENOID = "Selenoid";
     static readonly DOCKER = "Docker";
-    static readonly GITHUB_ACTIONS = "Github Actions";
+    static readonly GITHUB_ACTIONS = "GitHub Actions";
     static readonly JENKINS = "Jenkins";
     static readonly TEAM_CITY = "TeamCity";
     static readonly POSTGRESQL = "PostgreSQL"

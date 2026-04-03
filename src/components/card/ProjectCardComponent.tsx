@@ -22,6 +22,7 @@ const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
             <ModalComponent
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
+                className={styles.projectCardModal}
             >
                 <ProjectModalComponent project={project}/>
             </ModalComponent>
