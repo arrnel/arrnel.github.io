@@ -1,6 +1,11 @@
 import type {Project} from "../model/Project.ts";
 import {FormatTranslateCode} from "../model/ModifiedText.ts";
 
+const VITE_REPO_OWNER = import.meta.env.VITE_REPO_OWNER;
+const VITE_REPO_ROCOCO = import.meta.env.VITE_REPO_ROCOCO;
+const VITE_REPO_BANK = import.meta.env.VITE_REPO_BANK;
+const VITE_REPO_AE = import.meta.env.VITE_REPO_AE;
+const VITE_REPO_AE_PY = import.meta.env.VITE_REPO_AE_PY;
 export const PROJECTS_DATA: Project[] = [
     {
         title: 'projects.project_info.0.title',
@@ -9,19 +14,19 @@ export const PROJECTS_DATA: Project[] = [
         skills: [
             {
                 "title": "projects.buttons.github",
-                "url": "https://github.com/arrnel/rococo",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}`,
             },
             {
                 "title": "projects.buttons.allure-reports",
-                "url": "https://arrnel.github.io/rococo",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}`,
             },
             {
                 "title": "projects.buttons.allure-report-example",
-                "url": "https://arrnel.github.io/rococo/...",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}/...`,
             },
             {
                 "title": "projects.buttons.github-actions",
-                "url": "https://github.com/arrnel/rococo/actions",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}/actions`,
             },
         ],
         logo: "/assets/project/rococo/logo.png",
@@ -40,19 +45,19 @@ export const PROJECTS_DATA: Project[] = [
         skills: [
             {
                 "title": "projects.buttons.github",
-                "url": "https://github.com/arrnel/bank"
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}`
             },
             {
                 "title": "projects.buttons.allure-reports",
-                "url": "https://arrnel.github.io/bank"
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}`
             },
             {
                 "title": "projects.buttons.allure-report-example",
-                "url": "https://arrnel.github.io/bank/..."
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}/...`
             },
             {
                 "title": "projects.buttons.github-actions",
-                "url": "https://github.com/arrnel/bank/actions",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}/actions`,
             },
         ],
         logo: "/assets/project/bank/logo.png",
@@ -71,23 +76,23 @@ export const PROJECTS_DATA: Project[] = [
         skills: [
             {
                 "title": "projects.buttons.github",
-                "url": "https://github.com/arrnel/automation-exercise",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}`,
             },
             {
                 "title": "projects.buttons.site",
-                "url": "https://arrnel.github.io/automation-exercise-py",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}`,
             },
             {
                 "title": "projects.buttons.allure-reports",
-                "url": "https://arrnel.github.io/automation-exercise",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}`,
             },
             {
                 "title": "projects.buttons.allure-report-example",
-                "url": "https://arrnel.github.io/automation-exercise/...",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}/...`,
             },
             {
                 "title": "projects.buttons.github-actions",
-                "url": "https://github.com/arrnel/automation-exercise/actions",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}/actions`,
             },
         ],
         logo: "/assets/project/automation-exercise/logo.png",
@@ -106,23 +111,23 @@ export const PROJECTS_DATA: Project[] = [
         skills: [
             {
                 "title": "projects.buttons.github",
-                "url": "https://github.com/arrnel/automation-exercise-py",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY}`,
             },
             {
                 "title": "projects.buttons.site",
-                "url": "https://arrnel.github.io/automation-exercise-py",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}`,
             },
             {
                 "title": "projects.buttons.allure-reports",
-                "url": "https://arrnel.github.io/automation-exercise-py",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}`,
             },
             {
                 "title": "projects.buttons.allure-report-example",
-                "url": "https://arrnel.github.io/automation-exercise-py/...",
+                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}/...`,
             },
             {
                 "title": "projects.buttons.github-actions",
-                "url": "https://github.com/arrnel/automation-exercise-py/actions",
+                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_OWNER}/actions`,
             },
         ],
         logo: "/assets/project/automation-exercise-py/logo.png",

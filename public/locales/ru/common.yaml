@@ -97,20 +97,21 @@ experience:
         
         ### **РусГидро (старый и новый стек):**
         ### **Достижения по проекту:**
-        - Закрыл потребность в автоматизации тестирования на данном проекте
+        - Закрыл потребность в автоматизации тестирования на данном проекте по старому и новому стеку
         
         **Обязанности:**         
-        - Проводил функциональное, smoke, исследовательское видов тестирований
-        - Тестирование мобильной версии сайта
+        - Проводил функциональное, smoke, исследовательское виды тестирований
         - Тестирование интеграции:  
             * Внутренние проекты и сервисы (ЕЛК, ГОС, МСП, ...)  
             * Внешние сервисы (ЕИС, Норбит, ЕСИА, ...)
+        - Тестировал мобильную версию сайта
         - Проверка багов и тестирование кейсов, пришедших с поддержки
         - Автоматизация тестов
         - Анализ логов и результатов прошедших тестов
         - Развернул прогон тестов в CI/CD в TeamCity
         - Менторство 2-ух Junior QA
         - Ревью тест-кейсов
+        - Участвовал в планировании спринтов
                 
         ### **178-ФЗ:**
         **Достижения:** 
@@ -119,13 +120,14 @@ experience:
         - Запустил с нуля автоматизацию тестирования и настроил CI/CD 
         
         **Обязанности:** 
-        - Проводил функциональное, smoke, исследовательское видов тестирований
+        - Проводил функциональное, smoke, исследовательское виды тестирований
         - Тестирование интеграции:  
             * Внутренние проекты и сервисы (ГОС, ФА, МСП, ...)  
             * Внешние сервисы (ГИС Торги, Норбит)
         - Менторство 3-ех Junior QA
         - Автоматизация тестирования
         - Ревью тест-кейсов и кода автоматизации
+        - Участвовал в планировании спринтов
         
         ### **и другие ...**
         
@@ -161,7 +163,7 @@ experience:
         * **Межсервисное общение**: Kafka, gRPC
         * **Окружение**: Docker
         * **Отчеты**: Allure Report
-        * **CI/CD**: GitHub CI
+        * **CI/CD**: GitLab CI
         * **Логи**: Kibana, Grafana
         * **Документация**: Youtrack, Confluence
         
@@ -173,16 +175,20 @@ experience:
         * **DB**: PostgreSQL, SQLAlchemy
         * **API**: Httpx
         * **UI**: Selene
+        * **Окружение**: Docker
+        * **Отчеты**: Allure Report
+        * **CI/CD**: GitLab CI
         
         ### **Проект 1:**
         **Достижения по проекту:**
-        - Увеличил покрытие автотестами критического функционала с 45% до 80%
-        - Внедрил retry механизм для нестабильных тестов
-        - Внедрил запуск автотестов в CI/CD pipeline
+        * Закрыл потребность в автоматизации тестирования
+        * Внедрил retry механизм для нестабильных тестов
+        * Внедрил запуск автотестов в CI/CD pipeline
         
         **Обязанности:**
-        - Ручное тестирование функционала API + UI + gRPC
-        -  
+        * Проводил функциональное, нефункциональное, smoke, исследовательское виды тестирований
+        * Автоматизация тестирования
+        * Анализ логов и результатов прошедших тестов
         
         ### **Проект 2:**
         **Достижения по проекту:**
@@ -237,8 +243,9 @@ experience:
         
         
         **Обязанности:**
-        - Ручное тестирование функционала API + UI + Kafka
-        - 
+        * Проводил функциональное, нефункциональное, smoke, исследовательское виды тестирований
+        * Автоматизация тестирования
+        * Анализ логов и результатов прошедших тестов
         
         
         ### **и другие ...**
@@ -251,24 +258,7 @@ experience:
         * Настраивал CI/CD pipelines
         * Оптимизировал тестовую инфраструктуру
         
-        
-        #### Общие достижения, не касающиеся отдельных проектов
-        
-        * Повысил стабильность автотестов до 95%
-        * Сократил время регрессии на 60%
-        * Внедрил лучшие практики тестирования
-        * Разработал стандарты тестирования
-        * Обучил 4 junior QA automation инженеров
-        * Участвовал в построении QA процессов
-        * Внедрил shift-left тестирование
-        * Повысил качество релизов
-        * Снизил количество багов на production
-        * Внедрил автоматическое тестирование в CI/CD
-        
-        
         ### **и другие ...**
-        
-        #### Общие достижения, не касающиеся отдельных проектов
 
 projects:
   description: Посмотри Мои
@@ -330,8 +320,8 @@ projects:
         `GITHUB_TOKEN` с правами на чтение issue.
         
         ### Подробные инструкции по запуску:
-        1) Локально: [Ссылка на детальную информацию](https://github.com/arrnel/rococo?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-rococo-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B2-ide)
-        2) В Docker: [Ссылка на детальную информацию](https://github.com/arrnel/rococo?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        1) Локально: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-${VITE_REPO_ROCOCO}-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B2-ide)
+        2) В Docker: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
         3) В CI (GitHub Actions):  
           a) сделайте fork репозитория (если ещё не сделал)  
           b) в настройках репозитория укажи необходимые секреты и переменные окружения (`Settings` -> `Secrets and variables` -> `Actions`)  
@@ -339,7 +329,7 @@ projects:
           d) Запусти workflow
         
         ## 👉 **Подробнее**
-        Подробная информация доступна в [оригинальном README](https://github.com/arrnel/rococo).
+        Подробная информация доступна в [оригинальном README](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}).
     '1':
       title: Банк (Java)
       short_description: |
@@ -383,8 +373,8 @@ projects:
         2) Установить обязательные переменные окружения  
         
         ### Подробные инструкции по запуску:
-        1) Локально: [Ссылка на детальную информацию](https://github.com/arrnel/bank?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-rococo-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B2-ide)
-        2) В Docker: [Ссылка на детальную информацию](https://github.com/arrnel/bank?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        1) Локально: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-${VITE_REPO_ROCOCO}-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B2-ide)
+        2) В Docker: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
         3) В CI (GitHub Actions):  
           a) сделайте fork репозитория (если ещё не сделал)  
           b) в настройках репозитория укажи необходимые секреты и переменные окружения (`Settings` -> `Secrets and variables` -> `Actions`)  
@@ -392,7 +382,7 @@ projects:
           d) Запусти workflow  
         
         ## 👉 **Подробнее**
-        Подробная информация доступна в [оригинальном README](https://github.com/arrnel/bank).
+        Подробная информация доступна в [оригинальном README](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}).
     '2':
       title: Интернет-магазин (Java)
       short_description: |
@@ -432,8 +422,8 @@ projects:
         `GITHUB_TOKEN`, `GITHUB_TOKEN_NAME`, `GITHUB_ACCOUNT_NAME`, `GITHUB_REPO_NAME`
         
         ### **Способы запуска:**
-        1) Локально: [Ссылка на детальную информацию](https://github.com/arrnel/automation-exercise/blob/master/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-ide)
-        2) В Docker: [Ссылка на детальную информацию](https://github.com/arrnel/automation-exercise/blob/master/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        1) Локально: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}/blob/master/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-ide)
+        2) В Docker: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}/blob/master/README.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
         3) В CI (GitHub Actions):  
           a) сделайте fork репозитория (если ещё не сделал)  
           b) в настройках репозитория укажи необходимые секреты и переменные окружения (`Settings` -> `Secrets and variables` -> `Actions`)  
@@ -441,7 +431,7 @@ projects:
           d) Запусти workflow  
         
         ## 👉**Подробнее**
-        Подробная информация доступна в [оригинальном README](https://github.com/arrnel/automation-exercise)
+        Подробная информация доступна в [оригинальном README](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE})
     '3':
       title: Интернет-магазин (Python)
       short_description: |
@@ -477,8 +467,8 @@ projects:
         3) Сгенерируй PAT токен в GitHub (с правами на чтение issue) и установить обязательные переменные окружения `GITHUB_TOKEN_NAME` и `GITHUB_TOKEN`
         
         ### Способы запуска:
-        1) Локально: [Ссылка на детальную информацию](https://github.com/arrnel/automation-exercise-py?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-ide)
-        2) В Docker: [Ссылка на детальную информацию](https://github.com/arrnel/automation-exercise-py?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
+        1) Локально: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY}?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-ide)
+        2) В Docker: [Ссылка на детальную информацию](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY}?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B2-docker)
         3) В CI (GitHub Actions):  
             a) сделайте fork репозитория (если ещё не сделал)  
             b) в настройках репозитория укажи необходимые секреты и переменные окружения (`Settings` -> `Secrets and variables` -> `Actions`)  
@@ -486,7 +476,7 @@ projects:
             d) Запусти workflow  
         
         ## 👉 **Подробнее**
-        Подробная информация доступна в [оригинальном README](https://github.com/arrnel/automation-exercise-py)
+        Подробная информация доступна в [оригинальном README](https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY})
 contacts:
   description: Свяжись Со Мной
   title: Контакты

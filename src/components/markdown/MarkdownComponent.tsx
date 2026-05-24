@@ -3,7 +3,7 @@ import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
 import {renderToString} from 'react-dom/server';
 import React from 'react';
-import {useTextTransform} from '../../hook/useTextTransform.tsx';
+import {useViteEnvReplacements} from '../../hook/useTextTransform.tsx';
 import {MarkdownTranslateCode} from '../../model/ModifiedText.ts';
 import styles from './MarkdownComponent.module.css'
 import rehypeExternalLinks from "rehype-external-links";
@@ -13,7 +13,7 @@ export const MarkdownComponent: React.FC<{
     dataTestId: string;
 }> = ({content, dataTestId}) => {
 
-    const transformText = useTextTransform();
+    const transformText = useViteEnvReplacements();
     return (
         <div className={styles.markdownContainer}
              data-test-id={dataTestId}

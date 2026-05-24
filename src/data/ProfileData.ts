@@ -11,17 +11,17 @@ export const PROFILE_DATA: Profile = {
     socials: [
         {
             title: "profile.social.telegram",
-            url: "http://t.me/arrnel94",
+            url: `http://t.me/${import.meta.env.VITE_SOCIAL_TELEGRAM}`,
             image: "/assets/social/telegram.svg",
         },
         {
             title: "profile.social.linkedin",
-            url: "http://linkedin.com/arrnel",
+            url: `http://linkedin.com/${import.meta.env.VITE_SOCIAL_LINKEDIN}`,
             image: "/assets/social/linkedin.svg",
         },
         {
             title: "profile.social.github",
-            url: "http://t.me/arrnel",
+            url: `http://github.com/${import.meta.env.VITE_REPO_OWNER}`,
             image: "/assets/skill/github.svg",
         }
     ]

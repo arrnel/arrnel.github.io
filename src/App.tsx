@@ -1,4 +1,14 @@
 import React from 'react';
+import './i18n';
+import {useTranslation} from "react-i18next";
+import {Section} from "./model/Section.ts";
+
+import {EXPERIENCES_DATA} from "./data/ExperienceData.ts";
+import {PROJECTS_DATA} from "./data/ProjectData.ts";
+import {CONTACTS_DATA} from "./data/ContactData.ts";
+import {PROFILE_DATA} from "./data/ProfileData.ts";
+import {ABOUT_DATA} from "./data/AboutData.ts";
+
 import HeaderComponent from './components/section/HeaderComponent.tsx';
 import {ThemeProvider} from './context/ThemeContext';
 import AboutSectionContent from "./components/section/AboutSectionContent.tsx";
@@ -6,16 +16,8 @@ import ExperienceSectionContent from "./components/section/ExperienceSectionCont
 import ProjectsSectionContent from "./components/section/ProjectsSectionContent.tsx";
 import ContactsSectionContent from "./components/section/ContactsSectionContent.tsx";
 import FooterComponent from "./components/section/FooterComponent.tsx";
-import {EXPERIENCES_DATA} from "./data/ExperienceData.ts";
-import {PROJECTS_DATA} from "./data/ProjectData.ts";
-import {CONTACTS_DATA} from "./data/ContactData.ts";
-import {PROFILE_DATA} from "./data/ProfileData.ts";
-import {ABOUT_DATA} from "./data/AboutData.ts";
 import SectionTitleComponent from "./components/section/SectionTitleComponent.tsx";
-import {useTranslation} from "react-i18next";
 import ProfileSectionContent from "./components/section/ProfileSectionContent.tsx";
-import {Section} from "./model/Section.ts";
-import './i18n';
 
 const App: React.FC = () => {
 
