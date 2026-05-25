@@ -8,7 +8,6 @@ const ProfileSectionContent: React.FC<{
     profile: Profile;
 }> = ({ profile }) => {
 
-    const repoName = import.meta.env.VITE_REPO_RESUME;
     const { t } = useTranslation();
     const lang = i18n.language;
 
@@ -19,7 +18,7 @@ const ProfileSectionContent: React.FC<{
     };
 
     const handleDownloadCV = () => {
-        window.open(`${repoName}/assets/cv/cv_${lang}.pdf`, '_blank');
+        window.open(`/assets/cv/cv_${lang}.pdf`, '_blank');
     };
 
     const handleSocialClick = (url: string) => {
@@ -31,7 +30,7 @@ const ProfileSectionContent: React.FC<{
             {/* Profile Image */}
             <div className={styles.profileImageContainer}>
                 <img
-                    src={repoName + profile.image.image}
+                    src={profile.image.image}
                     alt={t(profile.image.title)}
                     data-test-id="profile-image"
                 />
@@ -77,7 +76,7 @@ const ProfileSectionContent: React.FC<{
                             onClick={() => handleSocialClick(contact.url)}
                         >
                             <img
-                                src={repoName + contact.image}
+                                src={contact.image}
                                 alt={`${contact.title} icon`}
                                 className="icon"
                                 data-test-id={`social-button-${contact.title}`}

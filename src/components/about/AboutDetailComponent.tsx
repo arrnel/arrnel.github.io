@@ -11,14 +11,12 @@ const AboutDetailComponent: React.FC<{
           description
       }) => {
 
-    const repoName = import.meta.env.VITE_REPO_RESUME;
-
     return (
         <div className={styles.detailContainer}>
 
             <img
                 className={styles.icon}
-                src={repoName + icon}
+                src={icon}
                 alt={`${title} icon`}
             />
 

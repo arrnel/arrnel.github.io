@@ -4,14 +4,13 @@ import styles from './ThemeSwitcherComponent.module.css'
 
 const ThemeSwitcherComponent: React.FC = () => {
 
-    const repoName = import.meta.env.VITE_REPO_RESUME;
     const {t} = useTranslation();
     const {isDark, toggleTheme} = useTheme();
 
     const theme_type = isDark
         ? "dark"
         : "light";
-    const icon = `${repoName}/assets/${theme_type}_theme.svg`;
+    const icon = `/assets/${theme_type}_theme.svg`;
     const alt_code = "theme." + theme_type;
 
     return (
@@ -25,7 +24,7 @@ const ThemeSwitcherComponent: React.FC = () => {
             >
                 <img
                     className="icon"
-                    src={repoName + icon}
+                    src={icon}
                     alt={t(alt_code)}
                 />
 
