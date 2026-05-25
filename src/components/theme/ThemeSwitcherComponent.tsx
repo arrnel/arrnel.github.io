@@ -9,8 +9,9 @@ const ThemeSwitcherComponent: React.FC = () => {
     const theme_type = isDark
         ? "dark"
         : "light";
-    const icon = "/assets/" + theme_type + "_theme.svg";
+    const icon = "assets/" + theme_type + "_theme.svg";
     const alt_code = "theme." + theme_type;
+    const repoName = import.meta.env.VITE_REPO_RESUME;
 
     return (
 
@@ -23,7 +24,7 @@ const ThemeSwitcherComponent: React.FC = () => {
             >
                 <img
                     className="icon"
-                    src={icon}
+                    src={repoName + '/' + icon}
                     alt={t(alt_code)}
                 />
 

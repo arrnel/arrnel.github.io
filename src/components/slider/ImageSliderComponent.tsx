@@ -12,11 +12,13 @@ interface ImageSliderProps {
 }
 
 const ImageSliderComponent: React.FC<ImageSliderProps> = ({
-    images,
-    title,
-    aspectRatio,
-    className = '',
-}) => {
+                                                              images,
+                                                              title,
+                                                              aspectRatio,
+                                                              className = '',
+                                                          }) => {
+
+    const repoName = import.meta.env.VITE_REPO_RESUME;
     const {t} = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -75,7 +77,7 @@ const ImageSliderComponent: React.FC<ImageSliderProps> = ({
                             className={styles.embla__slide}
                         >
                             <img
-                                src={src}
+                                src={repoName + '/' + src}
                                 alt={`${title} — ${idx + 1}`}
                                 className={styles.sliderImage}
                                 loading={idx === 0 ? 'eager' : 'lazy'}

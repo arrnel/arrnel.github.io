@@ -15,6 +15,7 @@ const viteReplacements = {
     VITE_REPO_BANK: import.meta.env.VITE_REPO_BANK,
     VITE_REPO_AE: import.meta.env.VITE_REPO_AE,
     VITE_REPO_AE_PY: import.meta.env.VITE_REPO_AE_PY,
+    VITE_REPO_AE_RESUME: import.meta.env.VITE_REPO_RESUME,
     VITE_SOCIAL_TELEGRAM: import.meta.env.VITE_SOCIAL_TELEGRAM,
     VITE_SOCIAL_LINKEDIN: import.meta.env.VITE_SOCIAL_LINKEDIN,
     VITE_SOCIAL_EMAIL: import.meta.env.VITE_SOCIAL_EMAIL,
