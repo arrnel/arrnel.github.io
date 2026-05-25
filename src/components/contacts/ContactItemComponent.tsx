@@ -5,13 +5,12 @@ import styles from './ContactItemComponent.module.css'
 
 const ContactItemComponent: React.FC<{ contact: ImageLink }> = ({contact}) => {
 
-    const repoName = import.meta.env.VITE_REPO_RESUME;
     const {t} = useTranslation();
 
     return (
         <a href={contact.url}>
             <div className={styles.contactInfoContainer}>
-                <img src={repoName + contact.image}
+                <img src={contact.image}
                      alt={`${contact.title} icon`}
                      className={`medium-icon ${styles.contactIcon}`}
                 />

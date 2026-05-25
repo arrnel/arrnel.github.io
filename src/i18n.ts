@@ -16,7 +16,7 @@ i18n
     defaultNS: 'common',
 
     backend: {
-      loadPath: `${import.meta.env.VITE_REPO_RESUME}/locales/{{lng}}/{{ns}}.yaml`,
+      loadPath: `/locales/{{lng}}/{{ns}}.yaml`,
 
       parse: (data: string) => yaml.parse(data),
     },

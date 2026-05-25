@@ -9,14 +9,13 @@ const AboutSectionContent: React.FC<{
     about: About;
 }> = ({about}) => {
 
-    const repoName = import.meta.env.VITE_REPO_RESUME;
     const {t} = useTranslation();
     const transformText = useTextTransform();
 
     return (
         <div className={`sectionContentContainer ${styles.aboutSectionContentWrapper}`}>
             <div className={styles.aboutImageContainer}>
-                <img src={repoName + about.image}
+                <img src={about.image}
                      alt="About image"
                      className={styles.aboutPic}
                 />
