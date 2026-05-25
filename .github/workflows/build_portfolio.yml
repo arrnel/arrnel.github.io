@@ -1,11 +1,12 @@
 name: Build portfolio
 on:
   workflow_dispatch:
-
+  push:
+    branches: [ 'master' ]
 
 jobs:
 
-  build_project:
+  deploy:
     runs-on: ubuntu-latest
 
     environment:
@@ -17,15 +18,20 @@ jobs:
       pages: write
       id-token: write
 
+    concurrency:
+      group: 'pages'
+      cancel-in-progress: true
+
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Setup Node
+      - name: Set up Node
         uses: actions/setup-node@v6
         with:
           node-version: ${{ vars.NODE_VERSION }}
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
@@ -39,9 +45,12 @@ jobs:
           VITE_REPO_AE: ${{ vars.REPO_ROCOCO }}
           VITE_REPO_AE_PY: ${{ vars.REPO_ROCOCO }}
 
-          SOCIAL_TELEGRAM: ${{ vars.SOCIAL_TELEGRAM }}
-          SOCIAL_LINKEDIN: ${{ vars.SOCIAL_LINKEDIN }}
-          SOCIAL_EMAIL: ${{ vars.SOCIAL_EMAIL }}
+          VITE_SOCIAL_TELEGRAM: ${{ vars.SOCIAL_TELEGRAM }}
+          VITE_SOCIAL_LINKEDIN: ${{ vars.SOCIAL_LINKEDIN }}
+          VITE_SOCIAL_EMAIL: ${{ vars.SOCIAL_EMAIL }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
