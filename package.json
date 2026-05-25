@@ -1,7 +1,6 @@
 {
   "name": "resume-app",
   "private": true,
-  "homepage": "https://$VITE_REPO_OWNER.github.io/$VITE_REPO_RESUME",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
