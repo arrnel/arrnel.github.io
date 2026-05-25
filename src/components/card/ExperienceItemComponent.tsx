@@ -11,6 +11,7 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
                                                                                                       experienceNumber
                                                                                                   }) => {
 
+    const repoName = import.meta.env.VITE_REPO_RESUME;
     const {t} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -61,7 +62,7 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
                         >
                             <img
                                 className={styles.skillIcon}
-                                src={skill.image}
+                                src={repoName + skill.image}
                                 alt={t(skill.title) + " icon"}
                             />
                             <h4>{t(skill.title)}</h4>
