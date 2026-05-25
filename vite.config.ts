@@ -4,7 +4,7 @@ import { githubPagesSpa } from "@sctg/vite-plugin-github-pages-spa";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: `/${process.env.VITE_REPO_RESUME}/` || '/',
+  // base: `/${process.env.VITE_REPO_RESUME}/` || '/',
   plugins: [
       react(),
       githubPagesSpa({
