@@ -41,6 +41,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          VITE_ANALYTICS_DEBUG: ${{ vars.ANALYTICS_DEBUG }}
           VITE_ANALYTICS_PROVIDER: ${{ vars.ANALYTICS_PROVIDER }}
           VITE_GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
 

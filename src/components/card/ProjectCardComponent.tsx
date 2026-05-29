@@ -4,12 +4,14 @@ import type {Project} from '../../model/Project.ts';
 import ModalComponent from "../modal/base/ModalComponent.tsx";
 import styles from "./ProjectCardComponent.module.css";
 import ProjectModalComponent from "../modal/ProjectModalComponent.tsx";
-import {analytics} from "../../service/analytics.instance.ts";
+import {useAnalytics} from "../../hook/useAnalytics.ts";
 
 const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
 
     const {t} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+
+    const analytics = useAnalytics();
 
     const handleProjectModalClick = (projectTitle:string) => {
         setIsOpen(true);

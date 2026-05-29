@@ -1,9 +1,12 @@
 // src/hooks/useSectionView.ts
 import { useEffect, useRef } from 'react';
-import {analytics} from "../service/analytics.instance.ts";
+import {useAnalytics} from "./useAnalytics.ts";
 
 export const useSectionView = (sectionId: string) => {
+
     const ref = useRef<HTMLElement>(null);
+
+    const analytics = useAnalytics();
 
     useEffect(() => {
         const el = ref.current;

@@ -19,6 +19,7 @@
     "js-cookie": "^3.0.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-gtm-ts": "^1.0.45",
     "react-i18next": "^16.6.6",
     "react-markdown": "^10.1.0",
     "rehype-external-links": "^3.0.0",

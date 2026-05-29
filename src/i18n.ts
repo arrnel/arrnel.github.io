@@ -3,7 +3,6 @@ import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 import yaml from 'yaml';
-import {analytics} from "./service/analytics.instance.ts";
 
 i18n
     .use(Backend)
@@ -33,7 +32,6 @@ i18n
 
 export const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-    analytics.changeLanguageEvent(lng);
 };
 
 export default i18n;

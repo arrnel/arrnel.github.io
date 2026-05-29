@@ -1,10 +1,10 @@
 export const ANALYTIC_EVENT = {
-    LANGUAGE_CHANGE: 'language_change',
-    SECTION_VIEW: 'section_view',
+    CHANGE_LANGUAGE: 'change_language',
+    VIEW_SECTION: 'view_section',
     DOWNLOAD_CV: 'download_cv',
     OPEN_EXPERIENCE: 'open_experience',
     OPEN_PROJECT: 'open_project',
     NAVIGATE_BY_PROJECT_LINK: 'navigate_by_project_link',
-    PROJECT_CAROUSEL_VIEW: 'project_carousel_view',
-    CONTACT_NAVIGATION: 'contact_navigation',
+    VIEW_PROJECT_CAROUSEL: 'view_project_carousel',
+    NAVIGATE_BY_CONTACT_LINK: 'navigate_by_contact_link',
 } as const;

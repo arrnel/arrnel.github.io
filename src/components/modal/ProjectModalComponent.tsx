@@ -4,7 +4,7 @@ import type {Project} from '../../model/Project.ts';
 import styles from './ProjectModalComponent.module.css'
 import {MarkdownComponent} from "../markdown/MarkdownComponent.tsx";
 import ImageSliderComponent from "../slider/ImageSliderComponent.tsx";
-import {analytics} from "../../service/analytics.instance.ts";
+import {useAnalytics} from "../../hook/useAnalytics.ts";
 
 interface ProjectModalContentProps {
     project: Project;
@@ -27,7 +27,9 @@ const HorizontalIcon = () => (
     );
 
 const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) => {
+
     const { t } = useTranslation();
+    const analytics = useAnalytics();
     const [layout, setLayout] = useState<'horizontal' | 'vertical'>('horizontal');
 
     let projectTitleComponent = <></>;

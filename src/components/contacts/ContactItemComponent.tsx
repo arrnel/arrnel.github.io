@@ -2,11 +2,12 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import type {ImageLink} from "../../model/ImageLink.ts";
 import styles from './ContactItemComponent.module.css'
-import {analytics} from "../../service/analytics.instance.ts";
+import {useAnalytics} from "../../hook/useAnalytics.ts";
 
 const ContactItemComponent: React.FC<{ contact: ImageLink }> = ({contact}) => {
 
     const {t} = useTranslation();
+    const analytics = useAnalytics();
 
     const handleContactClick = (socialId: string, url: string) => {
         window.open(url, '_blank');

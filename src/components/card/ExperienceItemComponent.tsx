@@ -4,7 +4,7 @@ import type {Experience} from '../../model/Experience.ts';
 import styles from './ExperienceItemComponent.module.css'
 import ModalComponent from "../modal/base/ModalComponent.tsx";
 import ExperienceCardModalComponent from "../modal/ExperienceCardModalComponent.tsx";
-import {analytics} from "../../service/analytics.instance.ts";
+import {useAnalytics} from "../../hook/useAnalytics.ts";
 
 
 const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumber: number }> = ({
@@ -14,6 +14,8 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
 
     const {t} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+
+    const analytics = useAnalytics();
 
     const endDate = experience.end_date === 'ongoing'
         ? t('experience.ongoing')

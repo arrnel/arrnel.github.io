@@ -3,7 +3,7 @@ import styles from './ProfileSectionContent.module.css';
 import type {Profile} from "../../model/Profile.ts";
 import {Section} from "../../model/Section.ts";
 import i18n from "../../i18n.ts";
-import {analytics} from "../../service/analytics.instance.ts";
+import {useAnalytics} from "../../hook/useAnalytics.ts";
 
 const ProfileSectionContent: React.FC<{
     profile: Profile;
@@ -11,6 +11,8 @@ const ProfileSectionContent: React.FC<{
 
     const { t } = useTranslation();
     const lang = i18n.language;
+
+    const analytics = useAnalytics();
 
     const handleNavigateToContactsClick = () => {
         document.getElementById(Section.CONTACTS)?.scrollIntoView({

@@ -1,5 +1,6 @@
 import type {AnalyticsService} from "./analytics.types.ts";
 import {ANALYTIC_EVENT} from "./analytics.events.ts";
+import {ReactTagManager} from "react-gtm-ts";
 
 declare global {
     interface Window {
@@ -8,22 +9,39 @@ declare global {
 }
 
 export class GoogleAnalyticsProvider implements AnalyticsService {
-    private sendEvent(event: string, params?: Record<string, unknown>): void {
-        if (!window.gtag) {
-            return;
-        }
 
-        window.gtag('event', event, params);
+    constructor() {
+        ReactTagManager.init({
+            code: import.meta.env.VITE_GOOGLE_ANALYTICS_ID,
+            debug: false,
+            performance: false,
+        });
+    }
+
+    private sendEvent(
+        event: string,
+        params?: Record<string, unknown>,
+    ): void {
+        console.log(
+            '[GA] sendEvent:',
+            event,
+            params,
+        );
+
+        ReactTagManager.action({
+            event: event,
+            params: params,
+        })
     }
 
     changeLanguageEvent(lang: string): void {
-        this.sendEvent(ANALYTIC_EVENT.LANGUAGE_CHANGE, {
+        this.sendEvent(ANALYTIC_EVENT.CHANGE_LANGUAGE, {
             language: lang,
         });
     }
 
     viewSectionEvent(section: string): void {
-        this.sendEvent(ANALYTIC_EVENT.SECTION_VIEW, {
+        this.sendEvent(ANALYTIC_EVENT.VIEW_SECTION, {
             section,
         });
     }
@@ -46,7 +64,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
         });
     }
 
-    navigateByProjectLinkEvent(projectTitle: string, linkType:string): void {
+    navigateByProjectLinkEvent(projectTitle: string, linkType: string): void {
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_PROJECT_LINK, {
             project_title: projectTitle,
             linkType: linkType
@@ -54,13 +72,13 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     }
 
     viewProjectCarouselEvent(projectTitle: string): void {
-        this.sendEvent(ANALYTIC_EVENT.PROJECT_CAROUSEL_VIEW, {
+        this.sendEvent(ANALYTIC_EVENT.VIEW_PROJECT_CAROUSEL, {
             project_title: projectTitle,
         });
     }
 
     navigateByContactEvent(contactTitle: string): void {
-        this.sendEvent(ANALYTIC_EVENT.CONTACT_NAVIGATION, {
+        this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_CONTACT_LINK, {
             contact_title: contactTitle,
         });
     }
