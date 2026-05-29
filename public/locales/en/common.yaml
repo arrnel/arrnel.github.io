@@ -49,18 +49,86 @@ experience:
       position: Full-stack QA Engineer
       company: ROSELTORG
       short_description: |
-        Performed functional, smoke, integration, and exploratory testing across multiple company projects.
-        Built test automation frameworks from scratch and enhanced existing ones. 
-        Analyzed logs and test execution results to identify issues and improve stability. 
-        Mentored QA and Junior AQA engineers, and conducted reviews of manual test cases and automation code. 
-        Wrote how-to guides on test automation for team adoption and knowledge sharing. 
-        Developed supporting tools to accelerate testing and implemented a service for test data generation and validation.
-      description: |
         Reviewed product requirement documents and functional specifications.
         Conducted functional testing of the web-application for B2B and B2C in the
         e-procurement industry. Implemented and maintained manual and automated E2E
         and integration tests. Demonstrated teamwork by promoting ideas, helping other
         team members grow their skills.
+      description: |
+        ## **Full-stack QA Engineer | Roseltorg***
+        Nov 2019 – Aug 2023
+        ## **Technical Skills**
+        * **Manual testing**: Insomnia/Postman, SOAP UI, Fiddler/Charles, DevTools
+        * **Documentation**: YouTrack, Confluence
+        * **Language**: Java 8/11
+        * **Build tool**: Gradle
+        * **Test framework**: JUnit 5
+        * **Configuration**: Owner
+        * **Database**: PostgreSQL, Hibernate
+        * **API testing**: REST (REST Assured), SOAP (JAXB)
+        * **UI testing**: Selenide, Selenium
+        * **MQ**: RabbitMQ
+        * **Environment**: Docker
+        * **Reporting**: Allure Report
+        * **CI/CD**: TeamCity, Jenkins
+        * **Logging**: Kibana
+        * **Mocking**: WireMock
+
+        ## **Projects
+        ### **FKR (Primary)**
+
+        **Achievements:**
+        - Developed a tool for selecting non-browser digital signatures, enabling parallel test execution with the Unified Information System (EIS) instead of isolated VM runs; this utility was adopted by other projects integrating with EIS under 44-FZ that required a separate login workflow.
+        - Updated and stabilized the entire test suite, achieving a 100% pass rate.
+        - Redesigned the automation stack, reducing regression testing time by 50%.
+        - Fully met the project’s automation needs, eliminating manual regression backlogs.
+
+        **Responsibilities:**
+        - Conducted functional, smoke, and exploratory testing.
+        - Performed integration testing of internal projects/services (GOS, OCh, FA, etc.) and external services (EIS, ESIA, GIS Housing & Utilities, etc.).
+        - Verified bugs and tested support-escalated cases.
+        - Automated test cases, analyzed defects and errors.
+        - Analyzed logs and test run results.
+        - Set up automated test execution in CI/CD (TeamCity).
+
+        ### **RusHydro (Legacy & Modern Stack)**
+
+        **Achievements:**
+        - Delivered comprehensive test automation for both legacy and modern stacks, meeting all project requirements.
+
+        **Responsibilities:**
+        - Performed functional, smoke, and exploratory testing.
+        - Integration tested internal systems (ELK, GOS, MSP, etc.) and external services (EIS, Norbit, ESIA, etc.).
+        - Tested the mobile web version of the application.
+        - Verified bugs and support tickets.
+        - Automated test cases.
+        - Analyzed logs and test results.
+        - Configured CI/CD test runs in TeamCity.
+        - Mentored 2 Junior QA engineers.
+        - Reviewed test cases.
+        - Participated in sprint planning.
+
+        ### **178-FZ**
+
+        **Achievements:**
+        - Created scripts early in the project to speed up manual testing before automation was introduced.
+        - Built test automation from scratch and configured CI/CD pipelines.
+
+        **Responsibilities:**
+        - Conducted functional, smoke, and exploratory testing.
+        - Integration tested internal systems (GOS, FA, MSP, etc.) and external services (GIS Torgi, Norbit).
+        - Mentored 3 Junior QA engineers.
+        - Automated testing.
+        - Reviewed test cases and automation code.
+        - Participated in sprint planning.
+        
+        ### Contributions to Another Projects & Testing Department
+        - Authored how-to guides on test automation.
+        - Designed and delivered test frameworks for various projects.
+        - Built a data generation and validation service for automated tests, adopted by multiple teams.
+        - Participated in internal company competitions.
+        - Consistently delivered high-quality testing outcomes under tight deadlines and with incomplete specifications.
+
     '2':
       position: QA Automation Engineer
       company: NDA

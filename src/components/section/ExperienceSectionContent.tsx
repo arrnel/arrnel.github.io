@@ -10,7 +10,7 @@ const ExperienceSectionContent: React.FC<{
             <div className={styles.experiencesContainer}>
                 {experiences.map((experience, idx) => (
                     <ExperienceItemComponent
-                        key={idx}
+                        key={experience.id}
                         experience={experience}
                         experienceNumber={idx}
                     />

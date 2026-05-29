@@ -8,8 +8,8 @@ const ContactsSectionContent: React.FC<{
     return (
         <div className={`sectionContentContainer ${styles.contactsSectionContentContainer}`}>
             <div className={styles.contactsList}>
-                {contacts.map((contact, idx) => (
-                    <ContactItemComponent key={idx} contact={contact} />
+                {contacts.map((contact) => (
+                    <ContactItemComponent key={contact.id} contact={contact} />
                 ))}
             </div>
         </div>

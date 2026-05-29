@@ -4,6 +4,7 @@ import type {Experience} from '../../model/Experience.ts';
 import styles from './ExperienceItemComponent.module.css'
 import ModalComponent from "../modal/base/ModalComponent.tsx";
 import ExperienceCardModalComponent from "../modal/ExperienceCardModalComponent.tsx";
+import {analytics} from "../../service/analytics.instance.ts";
 
 
 const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumber: number }> = ({
@@ -20,6 +21,11 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
 
     const handleSkillClick = (url: string) => {
         window.open(url, '_blank');
+    };
+
+    const handleExperienceModalClick = (experienceTitle:string) => {
+        setIsOpen(true);
+        analytics.openExperienceEvent(experienceTitle)
     };
 
     return (
@@ -52,9 +58,9 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
             </div>
             <div className={styles.skillsContainer}>
                 {
-                    experience.skills.map((skill, idx) => (
+                    experience.skills.map((skill) => (
                         <button
-                            key={idx}
+                            key={skill.id}
                             className={styles.skillButton}
                             data-test-id={`experience-${experienceNumber}-skill-${skill.title.replaceAll(" ", "_").toLowerCase()}`}
                             onClick={() => handleSkillClick(skill.url)}
@@ -68,7 +74,7 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
                         </button>
                     ))}
             </div>
-            <button className={styles.moreButton} onClick={() => setIsOpen(true)}>
+            <button className={styles.moreButton} onClick={() => handleExperienceModalClick(experience.id)}>
                     {t('buttons.more')}
             </button>
             <ModalComponent

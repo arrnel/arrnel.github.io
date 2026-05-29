@@ -5,6 +5,7 @@ import {FormatTranslateCode} from "../model/ModifiedText.ts";
 
 export const EXPERIENCES_DATA: Experience[] = [
     {
+        id: "AQA_NDA_2023",
         position: 'experience.works.2.position',
         company: 'experience.works.2.company',
         short_description: 'experience.works.2.short_description',
@@ -44,6 +45,7 @@ export const EXPERIENCES_DATA: Experience[] = [
         ]
     },
     {
+        id: "FQA_ROSELTORG_2019",
         position: 'experience.works.1.position',
         company: 'experience.works.1.company',
         short_description: 'experience.works.1.short_description',
@@ -73,6 +75,7 @@ export const EXPERIENCES_DATA: Experience[] = [
         ]
     },
     {
+        id: "SYS_CIT_2018",
         position: 'experience.works.0.position',
         company: 'experience.works.0.company',
         short_description: 'experience.works.0.short_description',

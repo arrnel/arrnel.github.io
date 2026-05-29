@@ -18,6 +18,7 @@ import ContactsSectionContent from "./components/section/ContactsSectionContent.
 import FooterComponent from "./components/section/FooterComponent.tsx";
 import SectionTitleComponent from "./components/section/SectionTitleComponent.tsx";
 import ProfileSectionContent from "./components/section/ProfileSectionContent.tsx";
+import TrackedSection from "./components/section/TrackedSection.tsx";
 
 const App: React.FC = () => {
 
@@ -33,14 +34,14 @@ const App: React.FC = () => {
 
                 <main>
                     {/* === PROFILE === */}
-                    <section id="profile" className="section profileSection">
+                    <TrackedSection id="profile" className="section profileSection">
                         <div className="sectionContentWrapper profileSectionContentWrapper">
                             <ProfileSectionContent profile={PROFILE_DATA}/>
                         </div>
-                    </section>
+                    </TrackedSection>
 
                     {/* === ABOUT === */}
-                    <section id="about" className="section aboutSection">
+                    <TrackedSection id="about" className="section aboutSection">
                         <div className="sectionTitleWrapper aboutSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('about.title')}
@@ -51,10 +52,10 @@ const App: React.FC = () => {
                             <AboutSectionContent about={ABOUT_DATA}/>
                         </div>
                         <div className="sectionTitleDuplicator aboutSectionTitleDuplicator"/>
-                    </section>
+                    </TrackedSection>
 
                     {/* === EXPERIENCE === */}
-                    <section id="experience" className="section experienceSection">
+                    <TrackedSection id="experience" className="section experienceSection">
                         <div className="sectionTitleWrapper experienceSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('experience.title')}
@@ -65,10 +66,10 @@ const App: React.FC = () => {
                             <ExperienceSectionContent experiences={EXPERIENCES_DATA}/>
                         </div>
                         <div className="sectionTitleDuplicator experienceSectionTitleDuplicator"/>
-                    </section>
+                    </TrackedSection>
 
                     {/* === PROJECTS === */}
-                    <section id="projects" className="section projectsSection">
+                    <TrackedSection id="projects" className="section projectsSection">
                         <div className="sectionTitleWrapper projectsSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('projects.title')}
@@ -79,10 +80,10 @@ const App: React.FC = () => {
                             <ProjectsSectionContent projects={PROJECTS_DATA}/>
                         </div>
                         <div className="sectionTitleDuplicator projectsSectionTitleDuplicator"/>
-                    </section>
+                    </TrackedSection>
 
                     {/* === CONTACTS === */}
-                    <section id="contacts" className="section contactsSection">
+                    <TrackedSection id="contacts" className="section contactsSection">
                         <div className="sectionTitleWrapper contactsSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('contacts.title')}
@@ -93,7 +94,7 @@ const App: React.FC = () => {
                             <ContactsSectionContent contacts={CONTACTS_DATA}/>
                         </div>
                         <div className="sectionTitleDuplicator contactsSectionTitleDuplicator"/>
-                    </section>
+                    </TrackedSection>
 
                     <FooterComponent sections={footerNavSections}/>
                 </main>

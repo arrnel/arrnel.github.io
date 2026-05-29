@@ -8,6 +8,8 @@ interface ImportMetaEnv {
     readonly VITE_SOCIAL_TELEGRAM: string;
     readonly VITE_SOCIAL_LINKEDIN: string;
     readonly VITE_SOCIAL_EMAIL: string;
+    readonly VITE_ANALYTICS_PROVIDER: string;
+    readonly VITE_GOOGLE_ANALYTICS_ID: string;
 }
 
 interface ImportMeta {

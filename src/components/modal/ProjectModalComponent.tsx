@@ -4,6 +4,7 @@ import type {Project} from '../../model/Project.ts';
 import styles from './ProjectModalComponent.module.css'
 import {MarkdownComponent} from "../markdown/MarkdownComponent.tsx";
 import ImageSliderComponent from "../slider/ImageSliderComponent.tsx";
+import {analytics} from "../../service/analytics.instance.ts";
 
 interface ProjectModalContentProps {
     project: Project;
@@ -47,6 +48,11 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
         setLayout(prev => (prev === 'horizontal' ? 'vertical' : 'horizontal'));
     };
 
+    const handleProjectLinkClick = (projectTitle: string, url: string) => {
+        analytics.navigateByProjectLinkEvent(projectTitle, url)
+        window.open(url, '_blank');
+    };
+
     return (
         <div className={styles.projectModalContainer}>
             {projectTitleComponent}
@@ -72,20 +78,27 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
                     </div>
 
                     <div className={buttonsClass} data-test-id="project-buttons-container">
-                        {project.skills.map((skill, idx) => (
-                            <a
-                                key={idx}
-                                href={skill.url}
+                        {project.links.map((link) => (
+                            /*<a
+                                key={link.id}
+                                href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <div
                                     className={styles.projectButton}
-                                    data-test-id={skill.title.replaceAll(".", "-").toLowerCase()}
+                                    data-test-id={link.title.replaceAll(".", "-").toLowerCase()}
                                 >
-                                    {t(skill.title)}
+                                    {t(link.title)}
                                 </div>
-                            </a>
+                            </a>*/
+                            <button key={link.id}
+                                    className={styles.projectButton}
+                                    data-test-id={link.title.replaceAll(".", "-").toLowerCase()}
+                                    onClick={() => handleProjectLinkClick(link.id, link.url)}
+                            >
+                                {t(link.title)}
+                            </button>
                         ))}
                     </div>
                 </div>

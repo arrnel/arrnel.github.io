@@ -42,6 +42,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          VITE_ANALYTICS_PROVIDER: ${{ vars.ANALYTICS_PROVIDER }}
+          VITE_GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
+
           VITE_REPO_OWNER: ${{ github.repository_owner }}
           VITE_REPO_ROCOCO: ${{ vars.REPO_ROCOCO }}
           VITE_REPO_BANK: ${{ vars.REPO_BANK }}

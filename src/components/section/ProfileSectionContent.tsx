@@ -3,6 +3,7 @@ import styles from './ProfileSectionContent.module.css';
 import type {Profile} from "../../model/Profile.ts";
 import {Section} from "../../model/Section.ts";
 import i18n from "../../i18n.ts";
+import {analytics} from "../../service/analytics.instance.ts";
 
 const ProfileSectionContent: React.FC<{
     profile: Profile;
@@ -11,7 +12,7 @@ const ProfileSectionContent: React.FC<{
     const { t } = useTranslation();
     const lang = i18n.language;
 
-    const handleContactClick = () => {
+    const handleNavigateToContactsClick = () => {
         document.getElementById(Section.CONTACTS)?.scrollIntoView({
             behavior: 'smooth',
         });
@@ -19,10 +20,12 @@ const ProfileSectionContent: React.FC<{
 
     const handleDownloadCV = () => {
         window.open(`/assets/cv/cv_${lang}.pdf`, '_blank');
+        analytics.downloadCvEvent(lang);
     };
 
-    const handleSocialClick = (url: string) => {
+    const handleContactClick = (contactId: string, url: string) => {
         window.open(url, '_blank');
+        analytics.navigateByContactEvent(contactId);
     };
 
     return (
@@ -61,7 +64,7 @@ const ProfileSectionContent: React.FC<{
                     <button
                         className={`btn ${styles.profileButton} ${styles.btn2}`}
                         data-test-id="contact-nav"
-                        onClick={handleContactClick}
+                        onClick={handleNavigateToContactsClick}
                     >
                         {t('profile.buttons.contact')}
                     </button>
@@ -69,11 +72,11 @@ const ProfileSectionContent: React.FC<{
 
                 {/* Socials */}
                 <div className={styles.socialButtonContainer}>
-                    {profile.socials.map((contact, idx) => (
+                    {profile.socials.map((contact) => (
                         <button
-                            key={idx}
+                            key={contact.id}
                             className={`btn ${styles.socialButtonContainer}`}
-                            onClick={() => handleSocialClick(contact.url)}
+                            onClick={() => handleContactClick(contact.id, contact.url)}
                         >
                             <img
                                 src={contact.image}

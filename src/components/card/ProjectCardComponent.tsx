@@ -4,11 +4,17 @@ import type {Project} from '../../model/Project.ts';
 import ModalComponent from "../modal/base/ModalComponent.tsx";
 import styles from "./ProjectCardComponent.module.css";
 import ProjectModalComponent from "../modal/ProjectModalComponent.tsx";
+import {analytics} from "../../service/analytics.instance.ts";
 
 const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
 
     const {t} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleProjectModalClick = (projectTitle:string) => {
+        setIsOpen(true);
+        analytics.openProjectEvent(projectTitle)
+    };
 
     return (
         <>
@@ -16,7 +22,7 @@ const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
                 <h3 className={styles.projectTitle}>{t(project.title)}</h3>
                 <p>{t(project.short_description)}</p>
                 <img src={project.logo} alt={t(project.title)}/>
-                <button className={styles.moreButton} onClick={() => setIsOpen(true)}>
+                <button className={styles.moreButton} onClick={() => handleProjectModalClick(project.id)}>
                     {t('buttons.more')}
                 </button>
             </div>

@@ -19,6 +19,7 @@ const viteReplacements = {
     VITE_SOCIAL_TELEGRAM: import.meta.env.VITE_SOCIAL_TELEGRAM,
     VITE_SOCIAL_LINKEDIN: import.meta.env.VITE_SOCIAL_LINKEDIN,
     VITE_SOCIAL_EMAIL: import.meta.env.VITE_SOCIAL_EMAIL,
+    VITE_ANALYTICS_PROVIDER: import.meta.env.VITE_ANALYTICS_PROVIDER,
 };
 
 export const useTextTransform = () => {

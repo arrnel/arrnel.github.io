@@ -2,6 +2,7 @@ import type { ImageLink } from "./ImageLink.ts";
 import type {ModifiedText} from "./ModifiedText.ts";
 
 export interface Experience {
+  id: string;
   position: string;
   company: string;
   short_description: string;
