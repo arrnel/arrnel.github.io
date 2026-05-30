@@ -52,6 +52,11 @@ jobs:
           VITE_REPO_AE_PY: ${{ vars.REPO_ROCOCO }}
           VITE_REPO_RESUME: ${{ github.event.repository.name }}
 
+          VITE_ROCOCO_REPORT_EXAMPLE: ${{ vars.ROCOCO_REPORT_EXAMPLE }}
+          VITE_BANK_REPORT_EXAMPLE: ${{ vars.BANK_REPORT_EXAMPLE }}
+          VITE_AE_REPORT_EXAMPLE: ${{ vars.AE_REPORT_EXAMPLE }}
+          VITE_AE_PY_REPORT_EXAMPLE: ${{ vars.AE_PY_REPORT_EXAMPLE }}
+
           VITE_SOCIAL_TELEGRAM: ${{ vars.SOCIAL_TELEGRAM }}
           VITE_SOCIAL_LINKEDIN: ${{ vars.SOCIAL_LINKEDIN }}
           VITE_SOCIAL_EMAIL: ${{ vars.SOCIAL_EMAIL }}

@@ -6,6 +6,10 @@ const VITE_REPO_ROCOCO = import.meta.env.VITE_REPO_ROCOCO;
 const VITE_REPO_BANK = import.meta.env.VITE_REPO_BANK;
 const VITE_REPO_AE = import.meta.env.VITE_REPO_AE;
 const VITE_REPO_AE_PY = import.meta.env.VITE_REPO_AE_PY;
+const VITE_ROCOCO_REPORT_EXAMPLE = import.meta.env.VITE_ROCOCO_EXAMPLE;
+const VITE_BANK_REPORT_EXAMPLE = import.meta.env.VITE_BANK_REPORT_EXAMPLE;
+const VITE_AE_REPORT_EXAMPLE = import.meta.env.VITE_AE_REPORT_EXAMPLE;
+const VITE_AE_PY_REPORT_EXAMPLE = import.meta.env.VITE_AE_PY_REPORT_EXAMPLE;
 
 // Translation codes
 const TC_SITE = "projects.buttons.site";
@@ -41,7 +45,7 @@ export const PROJECTS_DATA: Project[] = [
             {
                 link_type: LT_REPORT_EXAMPLE,
                 title: TC_REPORT_EXAMPLE,
-                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}/...`,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}/${VITE_ROCOCO_REPORT_EXAMPLE}`,
             },
             {
                 link_type: LT_GHA,
@@ -77,7 +81,7 @@ export const PROJECTS_DATA: Project[] = [
             {
                 link_type: LT_REPORT_EXAMPLE,
                 title: TC_REPORT_EXAMPLE,
-                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}/...`
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}/${VITE_BANK_REPORT_EXAMPLE}`
             },
             {
                 link_type: LT_GHA,
@@ -118,7 +122,7 @@ export const PROJECTS_DATA: Project[] = [
             {
                 link_type: LT_REPORT_EXAMPLE,
                 title: TC_REPORT_EXAMPLE,
-                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}/...`,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}/${VITE_AE_REPORT_EXAMPLE}`,
             },
             {
                 link_type: LT_GHA,
@@ -159,7 +163,7 @@ export const PROJECTS_DATA: Project[] = [
             {
                 link_type: LT_REPORT_EXAMPLE,
                 title: TC_REPORT_EXAMPLE,
-                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}/...`,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}/${VITE_AE_PY_REPORT_EXAMPLE}`,
             },
             {
                 link_type: LT_GHA,

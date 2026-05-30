@@ -81,23 +81,10 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
 
                     <div className={buttonsClass} data-test-id="project-buttons-container">
                         {project.links.map((link) => (
-                            /*<a
-                                key={link.id}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <div
+                            <button key={link.link_type}
                                     className={styles.projectButton}
                                     data-test-id={link.title.replaceAll(".", "-").toLowerCase()}
-                                >
-                                    {t(link.title)}
-                                </div>
-                            </a>*/
-                            <button key={link.id}
-                                    className={styles.projectButton}
-                                    data-test-id={link.title.replaceAll(".", "-").toLowerCase()}
-                                    onClick={() => handleProjectLinkClick(link.id, link.url)}
+                                    onClick={() => handleProjectLinkClick(link.link_type, link.url)}
                             >
                                 {t(link.title)}
                             </button>
