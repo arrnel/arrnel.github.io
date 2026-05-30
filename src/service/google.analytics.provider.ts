@@ -1,6 +1,7 @@
 import type {AnalyticsService} from "./analytics.types.ts";
 import {ANALYTIC_EVENT} from "./analytics.events.ts";
 import {ReactTagManager} from "react-gtm-ts";
+import {Section} from "../model/Section.ts";
 
 declare global {
     interface Window {
@@ -63,7 +64,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     openExperienceEvent(experienceTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_EXPERIENCE, {
             section: {
-                experience: {
+                [Section.EXPERIENCE] : {
                     [experienceTitle]: {
                         viewed: true,
                     }
@@ -75,7 +76,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     openProjectEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_PROJECT, {
             section: {
-                projects: {
+                [Section.PROJECTS] : {
                     [projectTitle]: {
                         viewed: true,
                     }
@@ -90,7 +91,9 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
             section: {
                 projects: {
                     [projectTitle]: {
-                        [linkType]: true,
+                        links: {
+                            [linkType]: true,
+                        }
                     }
                 }
             }

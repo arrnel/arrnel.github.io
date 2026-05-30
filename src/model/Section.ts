@@ -1,9 +1,9 @@
 export class Section {
 
-    static readonly PROFILE = "profile";
-    static readonly ABOUT = "about";
-    static readonly EXPERIENCE = "experience";
-    static readonly PROJECTS = "projects";
-    static readonly CONTACTS = "contacts";
+    static readonly PROFILE: string = "profile";
+    static readonly ABOUT: string = "about";
+    static readonly EXPERIENCE: string = "experience";
+    static readonly PROJECTS: string = "projects";
+    static readonly CONTACTS: string = "contacts";
 
 }

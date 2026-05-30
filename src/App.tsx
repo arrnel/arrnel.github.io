@@ -34,14 +34,14 @@ const App: React.FC = () => {
 
                 <main>
                     {/* === PROFILE === */}
-                    <TrackedSection id="profile" className="section profileSection">
+                    <TrackedSection id={Section.PROFILE} className="section profileSection">
                         <div className="sectionContentWrapper profileSectionContentWrapper">
                             <ProfileSectionContent profile={PROFILE_DATA}/>
                         </div>
                     </TrackedSection>
 
                     {/* === ABOUT === */}
-                    <TrackedSection id="about" className="section aboutSection">
+                    <TrackedSection id={Section.ABOUT} className="section aboutSection">
                         <div className="sectionTitleWrapper aboutSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('about.title')}
@@ -55,7 +55,7 @@ const App: React.FC = () => {
                     </TrackedSection>
 
                     {/* === EXPERIENCE === */}
-                    <TrackedSection id="experience" className="section experienceSection">
+                    <TrackedSection id={Section.EXPERIENCE} className="section experienceSection">
                         <div className="sectionTitleWrapper experienceSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('experience.title')}
@@ -69,7 +69,7 @@ const App: React.FC = () => {
                     </TrackedSection>
 
                     {/* === PROJECTS === */}
-                    <TrackedSection id="projects" className="section projectsSection">
+                    <TrackedSection id={Section.PROJECTS} className="section projectsSection">
                         <div className="sectionTitleWrapper projectsSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('projects.title')}
@@ -83,7 +83,7 @@ const App: React.FC = () => {
                     </TrackedSection>
 
                     {/* === CONTACTS === */}
-                    <TrackedSection id="contacts" className="section contactsSection">
+                    <TrackedSection id={Section.CONTACTS} className="section contactsSection">
                         <div className="sectionTitleWrapper contactsSectionTitleWrapper">
                             <SectionTitleComponent
                                 title={t('contacts.title')}
