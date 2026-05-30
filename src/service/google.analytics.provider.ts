@@ -42,55 +42,94 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
 
     viewSectionEvent(section: string): void {
         this.sendEvent(ANALYTIC_EVENT.VIEW_SECTION, {
-            viewed_sections: [section],
+            section: {
+                [section]: {
+                    viewed: true,
+                }
+            }
         });
     }
 
     downloadCvEvent(lang: string): void {
         this.sendEvent(ANALYTIC_EVENT.DOWNLOAD_CV, {
-            downloaded_cv: [lang],
+            section: {
+                profile: {
+                    download_cv: lang,
+                }
+            }
         });
     }
 
     openExperienceEvent(experienceTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_EXPERIENCE, {
-            viewed_experiences: [experienceTitle],
+            section: {
+                experience: {
+                    [experienceTitle]: {
+                        viewed: true,
+                    }
+                }
+            }
         });
     }
 
     openProjectEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_PROJECT, {
-            viewed_projects: [projectTitle],
+            section: {
+                project: {
+                    [projectTitle]: {
+                        viewed: true,
+                    }
+                }
+            }
         });
     }
 
     navigateByProjectLinkEvent(projectTitle: string, linkType: string): void {
 
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_PROJECT_LINK, {
-            navigate_by_project_link: {
-                [projectTitle]: [
-                    linkType,
-                ]
+            section: {
+                project: {
+                    [projectTitle]: {
+                        [linkType]: true,
+                    }
+                }
             }
         });
     }
 
     viewProjectCarouselEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.VIEW_PROJECT_CAROUSEL, {
-            viewed_project_carousel_slides:
-                [projectTitle],
+            section: {
+                project: {
+                    [projectTitle]: {
+                        carousel: true,
+                    }
+                }
+            }
         })
     }
 
-    navigateByHeaderContactEvent(contactTitle: string): void {
+    navigateByProfileContactEvent(contactTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_HEADER_CONTACT_LINK, {
-            header_contacts: [contactTitle],
+            section: {
+                profile: {
+                    contact: {
+                        [contactTitle]: true
+                    }
+                }
+            }
         });
     }
 
     navigateByContactEvent(contactTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_CONTACT_LINK, {
-            contact: [contactTitle],
+            section: {
+                contacts: {
+                    contact: {
+                        [contactTitle]: true
+                    }
+                }
+            }
         });
     }
 

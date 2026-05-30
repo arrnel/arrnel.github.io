@@ -14,6 +14,6 @@ export class NoneAnalyticsProvider implements AnalyticsService {
     openProjectEvent(_projectTitle: string) { return; }
     navigateByProjectLinkEvent(_projectTitle: string, _linkType: string) { return; }
     viewProjectCarouselEvent(_projectTitle: string) { return; }
-    navigateByHeaderContactEvent(_contactTitle: string) { return; }
+    navigateByProfileContactEvent(_contactTitle: string) { return; }
     navigateByContactEvent(_contactTitle: string) { return; }
 }
