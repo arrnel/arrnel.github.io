@@ -1,4 +1,5 @@
 import type {Profile} from "../model/Profile.ts";
+import {ContactType} from "../model/Contact.ts";
 
 export const PROFILE_DATA: Profile = {
     full_name: "profile.full_name",
@@ -10,19 +11,19 @@ export const PROFILE_DATA: Profile = {
     },
     socials: [
         {
-            id: "telegram",
+            id: ContactType.TELEGRAM,
             title: "profile.social.telegram",
             url: `http://t.me/${import.meta.env.VITE_SOCIAL_TELEGRAM}`,
             image: "/assets/social/telegram.svg",
         },
         {
-            id: "linkedin",
+            id: ContactType.LINKEDIN,
             title: "profile.social.linkedin",
             url: `http://linkedin.com/${import.meta.env.VITE_SOCIAL_LINKEDIN}`,
             image: "/assets/social/linkedin.svg",
         },
         {
-            id: "github",
+            id: ContactType.GITHUB,
             title: "profile.social.github",
             url: `http://github.com/${import.meta.env.VITE_REPO_OWNER}`,
             image: "/assets/skill/github.svg",

@@ -50,9 +50,9 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
         setLayout(prev => (prev === 'horizontal' ? 'vertical' : 'horizontal'));
     };
 
-    const handleProjectLinkClick = (projectTitle: string, link_type: string) => {
+    const handleProjectLinkClick = (projectTitle: string, link_type: string, url: string) => {
         analytics.navigateByProjectLinkEvent(projectTitle, link_type)
-        window.open(link_type, '_blank');
+        window.open(url, '_blank');
     };
 
     return (
@@ -84,7 +84,7 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
                             <button key={link.link_type}
                                     className={styles.projectButton}
                                     data-test-id={link.title.replaceAll(".", "-").toLowerCase()}
-                                    onClick={() => handleProjectLinkClick(project.id, link.link_type)}
+                                    onClick={() => handleProjectLinkClick(project.id, link.link_type, link.url)}
                             >
                                 {t(link.title)}
                             </button>

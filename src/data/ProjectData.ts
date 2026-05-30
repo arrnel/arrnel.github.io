@@ -99,7 +99,7 @@ export const PROJECTS_DATA: Project[] = [
         ],
     },
     {
-        id: `VITE_REPO_AE`,
+        id: VITE_REPO_AE,
         title: 'projects.project_info.2.title',
         short_description: 'projects.project_info.2.short_description',
         description: new FormatTranslateCode('projects.project_info.2.description'),
