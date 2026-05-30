@@ -6,6 +6,21 @@ const VITE_REPO_ROCOCO = import.meta.env.VITE_REPO_ROCOCO;
 const VITE_REPO_BANK = import.meta.env.VITE_REPO_BANK;
 const VITE_REPO_AE = import.meta.env.VITE_REPO_AE;
 const VITE_REPO_AE_PY = import.meta.env.VITE_REPO_AE_PY;
+
+// Translation codes
+const TC_SITE = "projects.buttons.site";
+const TC_GITHUB = "projects.buttons.github";
+const TC_TEST_RUNS = "projects.buttons.allure-reports";
+const TC_REPORT_EXAMPLE = "projects.buttons.allure-report-example";
+const TC_GHA = "projects.buttons.github-actions";
+
+// Link types
+const LT_REPO = "repo";
+const LT_SITE = "site";
+const LT_TEST_RUNS = "test-runs";
+const LT_REPORT_EXAMPLE = "report-example";
+const LT_GHA = "github-actions";
+
 export const PROJECTS_DATA: Project[] = [
     {
         id: VITE_REPO_ROCOCO,
@@ -14,24 +29,24 @@ export const PROJECTS_DATA: Project[] = [
         description: new FormatTranslateCode('projects.project_info.0.description'),
         links: [
             {
-                "id": `Project [${VITE_REPO_ROCOCO}] repo`,
-                "title": "projects.buttons.github",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}`,
+                link_type: LT_REPO,
+                title: TC_GITHUB,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}`,
             },
             {
-                "id": `Project [${VITE_REPO_ROCOCO}] Allure Report Hub`,
-                "title": "projects.buttons.allure-reports",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}`,
+                link_type: LT_TEST_RUNS,
+                title: TC_TEST_RUNS,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}`,
             },
             {
-                "id": `Project [${VITE_REPO_ROCOCO}] Allure Report Example`,
-                "title": "projects.buttons.allure-report-example",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}/...`,
+                link_type: LT_REPORT_EXAMPLE,
+                title: TC_REPORT_EXAMPLE,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_ROCOCO}/...`,
             },
             {
-                "id": `Project [${VITE_REPO_ROCOCO}] GitHub Actions List`,
-                "title": "projects.buttons.github-actions",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}/actions`,
+                link_type: LT_GHA,
+                title: TC_GHA,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_ROCOCO}/actions`,
             },
         ],
         logo: "/assets/project/rococo/logo.png",
@@ -50,24 +65,24 @@ export const PROJECTS_DATA: Project[] = [
         description: new FormatTranslateCode('projects.project_info.1.description'),
         links: [
             {
-                "id": `Project [${VITE_REPO_BANK}] repo`,
-                "title": "projects.buttons.github",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}`
+                link_type: LT_REPO,
+                title: TC_GITHUB,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}`
             },
             {
-                "id": `Project [${VITE_REPO_BANK}] Allure Report Hub`,
-                "title": "projects.buttons.allure-reports",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}`
+                link_type: LT_TEST_RUNS,
+                title: TC_TEST_RUNS,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}`
             },
             {
-                "id": `Project [${VITE_REPO_BANK}] Allure Report Example`,
-                "title": "projects.buttons.allure-report-example",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}/...`
+                link_type: LT_REPORT_EXAMPLE,
+                title: TC_REPORT_EXAMPLE,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_BANK}/...`
             },
             {
-                "id": `Project [${VITE_REPO_BANK}] GitHub Actions List`,
-                "title": "projects.buttons.github-actions",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}/actions`,
+                link_type: LT_GHA,
+                title: TC_GHA,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_BANK}/actions`,
             },
         ],
         logo: "/assets/project/bank/logo.png",
@@ -86,29 +101,29 @@ export const PROJECTS_DATA: Project[] = [
         description: new FormatTranslateCode('projects.project_info.2.description'),
         links: [
             {
-                "id": `Project [${VITE_REPO_AE}] repo`,
-                "title": "projects.buttons.github",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}`,
+                link_type: LT_REPO,
+                title: TC_GITHUB,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}`,
             },
             {
-                "id": `Project [${VITE_REPO_AE}] site`,
-                "title": "projects.buttons.site",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}`,
+                link_type: LT_SITE,
+                title: TC_SITE,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}`,
             },
             {
-                "id": `Project [${VITE_REPO_AE}] Allure Report Hub`,
-                "title": "projects.buttons.allure-reports",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}`,
+                link_type: LT_TEST_RUNS,
+                title: TC_TEST_RUNS,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}`,
             },
             {
-                "id": `Project [${VITE_REPO_AE}] Allure Report Example`,
-                "title": "projects.buttons.allure-report-example",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}/...`,
+                link_type: LT_REPORT_EXAMPLE,
+                title: TC_REPORT_EXAMPLE,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE}/...`,
             },
             {
-                "id": `Project [${VITE_REPO_AE}] GitHub Actions List`,
-                "title": "projects.buttons.github-actions",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}/actions`,
+                link_type: LT_GHA,
+                title: TC_GHA,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE}/actions`,
             },
         ],
         logo: "/assets/project/automation-exercise/logo.png",
@@ -127,29 +142,29 @@ export const PROJECTS_DATA: Project[] = [
         description: new FormatTranslateCode('projects.project_info.3.description'),
         links: [
             {
-                "id": `Project [${VITE_REPO_AE_PY}] repo`,
-                "title": "projects.buttons.github",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY}`,
+                link_type: LT_REPO,
+                title: TC_GITHUB,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY}`,
             },
             {
-                "id": `Project [${VITE_REPO_AE_PY}] site`,
-                "title": "projects.buttons.site",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}`,
+                link_type: LT_SITE,
+                title: TC_SITE,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}`,
             },
             {
-                "id": `Project [${VITE_REPO_AE_PY}] Allure Report Hub`,
-                "title": "projects.buttons.allure-reports",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}`,
+                link_type: LT_TEST_RUNS,
+                title: TC_TEST_RUNS,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}`,
             },
             {
-                "id": `Project [${VITE_REPO_AE_PY}] Allure Report Example`,
-                "title": "projects.buttons.allure-report-example",
-                "url": `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}/...`,
+                link_type: LT_REPORT_EXAMPLE,
+                title: TC_REPORT_EXAMPLE,
+                url: `https://${VITE_REPO_OWNER}.github.io/${VITE_REPO_AE_PY}/...`,
             },
             {
-                "id": `Project [${VITE_REPO_AE_PY}] GitHub Actions List`,
-                "title": "projects.buttons.github-actions",
-                "url": `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_OWNER}/actions`,
+                link_type: LT_GHA,
+                title: TC_GHA,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_OWNER}/actions`,
             },
         ],
         logo: "/assets/project/automation-exercise-py/logo.png",
