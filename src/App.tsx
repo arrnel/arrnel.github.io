@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './i18n';
 import {useTranslation} from "react-i18next";
 import {Section} from "./model/Section.ts";
@@ -26,6 +26,14 @@ const App: React.FC = () => {
 
     const headerNavSections = [Section.ABOUT, Section.EXPERIENCE, Section.PROJECTS, Section.CONTACTS];
     const footerNavSections = [Section.PROFILE, Section.ABOUT, Section.EXPERIENCE, Section.PROJECTS];
+
+    const useDocumentTitle = (title: string) => {
+        useEffect(() => {
+            document.title = title;
+        }, [title]);
+    };
+
+    useDocumentTitle(t("page.title.global"));
 
     return (
         <ThemeProvider>
