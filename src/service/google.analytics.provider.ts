@@ -12,7 +12,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
 
     constructor() {
         ReactTagManager.init({
-            code: import.meta.env.VITE_GOOGLE_ANALYTICS_ID,
+            code: import.meta.env.VITE_GTM_ID,
             debug: false,
             performance: false,
         });
@@ -42,44 +42,56 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
 
     viewSectionEvent(section: string): void {
         this.sendEvent(ANALYTIC_EVENT.VIEW_SECTION, {
-            section,
+            viewed_sections: [section],
         });
     }
 
     downloadCvEvent(lang: string): void {
         this.sendEvent(ANALYTIC_EVENT.DOWNLOAD_CV, {
-            language: lang,
+            downloaded_cv: [lang],
         });
     }
 
     openExperienceEvent(experienceTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_EXPERIENCE, {
-            experience_title: experienceTitle,
+            viewed_experiences: [experienceTitle],
         });
     }
 
     openProjectEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_PROJECT, {
-            project_title: projectTitle,
+            viewed_projects: [projectTitle],
         });
     }
 
     navigateByProjectLinkEvent(projectTitle: string, linkType: string): void {
+
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_PROJECT_LINK, {
-            project_title: projectTitle,
-            linkType: linkType
+            navigate_by_project_link: {
+                [projectTitle]: [
+                    linkType,
+                ]
+            }
         });
     }
 
     viewProjectCarouselEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.VIEW_PROJECT_CAROUSEL, {
-            project_title: projectTitle,
+            viewed_project_carousel_slides:
+                [projectTitle],
+        })
+    }
+
+    navigateByHeaderContactEvent(contactTitle: string): void {
+        this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_HEADER_CONTACT_LINK, {
+            header_contacts: [contactTitle],
         });
     }
 
     navigateByContactEvent(contactTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_CONTACT_LINK, {
-            contact_title: contactTitle,
+            contact: [contactTitle],
         });
     }
+
 }

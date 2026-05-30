@@ -27,7 +27,7 @@ const ProfileSectionContent: React.FC<{
 
     const handleContactClick = (contactId: string, url: string) => {
         window.open(url, '_blank');
-        analytics.navigateByContactEvent(contactId);
+        analytics.navigateByHeaderContactEvent(contactId);
     };
 
     return (

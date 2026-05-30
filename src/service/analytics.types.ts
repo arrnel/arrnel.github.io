@@ -14,6 +14,8 @@ export interface AnalyticsService {
 
     viewProjectCarouselEvent(projectTitle: string): void;
 
+    navigateByHeaderContactEvent(contactTitle: string): void;
+
     navigateByContactEvent(contactTitle: string): void;
 
 }

@@ -8,7 +8,7 @@ const VITE_REPO_AE = import.meta.env.VITE_REPO_AE;
 const VITE_REPO_AE_PY = import.meta.env.VITE_REPO_AE_PY;
 export const PROJECTS_DATA: Project[] = [
     {
-        id: `Project [${VITE_REPO_ROCOCO}] card`,
+        id: VITE_REPO_ROCOCO,
         title: 'projects.project_info.0.title',
         short_description: 'projects.project_info.0.short_description',
         description: new FormatTranslateCode('projects.project_info.0.description'),
@@ -44,7 +44,7 @@ export const PROJECTS_DATA: Project[] = [
         ],
     },
     {
-        id: `Project [${VITE_REPO_BANK}] card`,
+        id: VITE_REPO_BANK,
         title: 'projects.project_info.1.title',
         short_description: 'projects.project_info.1.short_description',
         description: new FormatTranslateCode('projects.project_info.1.description'),
@@ -80,7 +80,7 @@ export const PROJECTS_DATA: Project[] = [
         ],
     },
     {
-        id: `Project [${VITE_REPO_AE}] card`,
+        id: `VITE_REPO_AE`,
         title: 'projects.project_info.2.title',
         short_description: 'projects.project_info.2.short_description',
         description: new FormatTranslateCode('projects.project_info.2.description'),
@@ -121,7 +121,7 @@ export const PROJECTS_DATA: Project[] = [
         ],
     },
     {
-        id: `Project [${VITE_REPO_AE_PY}] card`,
+        id: VITE_REPO_AE_PY,
         title: 'projects.project_info.3.title',
         short_description: 'projects.project_info.3.short_description',
         description: new FormatTranslateCode('projects.project_info.3.description'),
