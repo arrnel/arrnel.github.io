@@ -8,9 +8,9 @@ const ProjectsSectionContent: React.FC<{
     return (
         <div className={`sectionContentContainer ${styles.projectsSectionContentContainer}`}>
             {
-                projects.map((project, idx) => (
+                projects.map((project) => (
                     <ProjectCardComponent
-                        key={idx}
+                        key={project.id}
                         project={project}
                     />
                 ))
