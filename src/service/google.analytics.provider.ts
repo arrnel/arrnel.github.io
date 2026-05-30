@@ -44,8 +44,8 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     viewSectionEvent(section: string): void {
         this.sendEvent(ANALYTIC_EVENT.VIEW_SECTION, {
             section: {
-                [section]: {
-                    viewed: true,
+                viewed_sections: {
+                    [section]: true,
                 }
             }
         });
@@ -64,7 +64,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     openExperienceEvent(experienceTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_EXPERIENCE, {
             section: {
-                [Section.EXPERIENCE] : {
+                [Section.EXPERIENCE]: {
                     [experienceTitle]: {
                         viewed: true,
                     }
@@ -76,7 +76,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     openProjectEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_PROJECT, {
             section: {
-                [Section.PROJECTS] : {
+                [Section.PROJECTS]: {
                     [projectTitle]: {
                         viewed: true,
                     }
