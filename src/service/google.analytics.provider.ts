@@ -75,7 +75,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     openProjectEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.OPEN_PROJECT, {
             section: {
-                project: {
+                projects: {
                     [projectTitle]: {
                         viewed: true,
                     }
@@ -88,7 +88,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
 
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_PROJECT_LINK, {
             section: {
-                project: {
+                projects: {
                     [projectTitle]: {
                         [linkType]: true,
                     }
@@ -100,7 +100,7 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     viewProjectCarouselEvent(projectTitle: string): void {
         this.sendEvent(ANALYTIC_EVENT.VIEW_PROJECT_CAROUSEL, {
             section: {
-                project: {
+                projects: {
                     [projectTitle]: {
                         carousel: true,
                     }
