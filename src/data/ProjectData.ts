@@ -168,7 +168,7 @@ export const PROJECTS_DATA: Project[] = [
             {
                 link_type: LT_GHA,
                 title: TC_GHA,
-                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_OWNER}/actions`,
+                url: `https://github.com/${VITE_REPO_OWNER}/${VITE_REPO_AE_PY}/actions`,
             },
         ],
         logo: "/assets/project/automation-exercise-py/logo.png",
