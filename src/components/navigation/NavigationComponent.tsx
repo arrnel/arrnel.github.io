@@ -25,8 +25,8 @@ const NavigationComponent: React.FC<{
             data-test-id={testId}
         >
             <ul className={styles.navMenu}>
-                {sectionTitles.map((section, idx) => (
-                    <li key={idx} className={styles.navItem}>
+                {sectionTitles.map((section) => (
+                    <li key={section} className={styles.navItem}>
                         <button
                             onClick={() => handleClick(section)}
                             className={styles.navButton}
