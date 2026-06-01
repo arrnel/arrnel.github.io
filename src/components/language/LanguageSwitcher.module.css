@@ -49,11 +49,7 @@
 
 }
 
-/* Адаптив (если нужно очень маленькое место) */
 @media (max-width: 480px) {
-    .languageSelectWrapper {
-        min-width: 100px;
-    }
 
     .select {
         font-size: var(--fs-md);

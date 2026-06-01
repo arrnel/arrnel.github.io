@@ -24,11 +24,28 @@
     flex-direction: column;
     max-width: 50rem;
     gap: var(--gap-lg);
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-xl);
 }
 
 .aboutDetailContainers {
     display: flex;
     gap: var(--gap-lg);
     font-size: var(--fs-lg);
+}
+
+.detailContainer{
+    min-width: 250px;
+}
+
+@media (max-width: 1100px) {
+    .aboutSectionContentWrapper {
+        flex-direction: column;
+        gap: var(--gap-xl);
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutDetailContainers {
+        flex-direction: column;
+    }
 }

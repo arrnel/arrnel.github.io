@@ -83,7 +83,6 @@
     transition: opacity var(--transition);
 }
 
-/* imageSliderContainer — разное поведение в зависимости от родителя */
 .imageSliderContainer {
     display: flex;
     justify-content: center;
