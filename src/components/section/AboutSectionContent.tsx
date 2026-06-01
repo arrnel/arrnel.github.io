@@ -23,9 +23,9 @@ const AboutSectionContent: React.FC<{
             <div className={styles.aboutInfo}>
                 <div className={styles.aboutDetailContainers}>
                     {
-                        about.details.map((detail, idx) => (
+                        about.details.map((detail) => (
                             <AboutDetailComponent
-                                key={idx}
+                                key={detail.title}
                                 icon={detail.image}
                                 title={t(detail.title)}
                                 description={transformText(detail.description)}

@@ -4,6 +4,7 @@
     border-radius: 2rem;
     border: var(--contrast-color) 0.1rem solid;
     background: var(--card-bg);
+    min-width: 250px;
 }
 
 .icon {

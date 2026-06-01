@@ -121,6 +121,11 @@ body.dark {
     --position-color: #9f9f9f;
 }
 
+body {
+    min-width: 450px;
+}
+
+
 h1 {
     font-size: var(--fs-5xl);
     font-weight: var(--font-weight-bold);
