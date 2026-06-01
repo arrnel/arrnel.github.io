@@ -1,20 +1,19 @@
 .languageSelectWrapper {
     position: relative;
     display: inline-block;
-    min-width: 120px;
 }
 
 .select {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 0.5rem 0.8rem;
+    padding: var(--mp-xm) var(--mp-md);
     background-color: var(--bg-color);
     color: var(--contrast-color, #e2e8f0);
     border: var(--border-profile-button) var(--contrast-color);
     border-radius: 2rem;
     text-align: center;
-    font-size: var(--font-size-header);
+    font-size: var(--fs-2xl);
     line-height: 1.4;
     appearance: none;
     cursor: pointer;
@@ -41,7 +40,7 @@
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    font-size: 0.75rem;
+    font-size: var(--fs-xm);
     transition: all 0.2s ease;
 }
 
@@ -57,7 +56,7 @@
     }
 
     .select {
-        font-size: 0.9rem;
-        padding: 0.45rem 2rem 0.45rem 0.9rem;
+        font-size: var(--fs-md);
+        padding: var(--mp-xm) var(--mp-lg) var(--mp-xm) var(--mp-md);
     }
 }

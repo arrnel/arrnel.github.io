@@ -14,8 +14,8 @@
     background-color: var(--card-bg);
     color: var(--contrast-color);
     border-radius: 2rem;
-    margin: 2rem auto;
-    padding: 0.5rem 0.8rem;
+    margin: var(--mp-lg) auto;
+    padding: var(--mp-xm) var(--mp-md);
     height: fit-content;
     gap: 3rem
 }

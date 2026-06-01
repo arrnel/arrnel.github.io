@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--gap-xm);
     margin: 1rem;
     max-height: 4rem;
     width: fit-content;
@@ -16,6 +16,6 @@ a {
 
 .contactTitle {
     max-height: 2rem;
-    font-size: var(--font-size-h4);
+    font-size: var(--fs-2xl);
     color: var(--contrast-color)
 }

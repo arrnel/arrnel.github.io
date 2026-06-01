@@ -18,7 +18,7 @@
     max-height: 75vh;
     width: 100%;
     overflow-y: scroll;
-    padding: 3rem;
+    padding: var(--mp-lg);
     position: relative;
 }
 
@@ -34,9 +34,9 @@
     right: 1rem;
     background: none;
     border: none;
-    font-size: var(--font-size-h3);
+    font-size: var(--fs-3xl);
     cursor: pointer;
     color: var(--contrast-color);
-    padding: 0.5rem;
+    padding: var(--mp-xm);
     line-height: 1;
 }

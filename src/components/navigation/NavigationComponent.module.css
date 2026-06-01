@@ -1,18 +1,22 @@
-.navMenu {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    list-style: none;
-    justify-content: center;
-}
-
+/* Базовые стили (десктоп) */
 .nav {
     display: flex;
     width: fit-content;
     flex-direction: row;
+    position: relative;
 }
 
-.nav li {
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-lg);
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
     display: flex;
     align-content: center;
 }
@@ -21,11 +25,87 @@
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: var(--font-size-header);
+    font-size: var(--fs-2xl);
     cursor: pointer;
+    transition: border-bottom-color 0.2s ease;
 }
 
 .navButton:hover {
     border-bottom: 2px solid transparent;
     border-bottom-color: var(--contrast-color);
+}
+
+/* Бургер-кнопка – скрыта на десктопе */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--mp-xm);
+    z-index: 1001;
+}
+
+.burgerLine {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Анимация бургера в крестик при открытом меню */
+.burger[aria-expanded="true"] .burgerLine:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger[aria-expanded="true"] .burgerLine:nth-child(2) {
+    opacity: 0;
+}
+.burger[aria-expanded="true"] .burgerLine:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .nav {
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--bg-color, white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap-lg);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        margin: 0;
+        padding: var(--mp-lg);
+    }
+
+    .navMenu.open {
+        transform: translateX(0);
+    }
+
+    .navItem {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navButton {
+        font-size: var(--fs-2xl);
+        padding: var(--mp-xm);
+    }
 }

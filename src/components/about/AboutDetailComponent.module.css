@@ -1,5 +1,5 @@
 .detailContainer {
-    padding: 1.5rem;
+    padding: var(--mp-lg);
     flex: 1;
     border-radius: 2rem;
     border: var(--contrast-color) 0.1rem solid;
