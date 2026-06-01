@@ -5,7 +5,7 @@
     justify-items: center;
     align-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: var(--gap-xl);
 }
 
 .aboutImageContainer {
@@ -23,10 +23,12 @@
     display: flex;
     flex-direction: column;
     max-width: 50rem;
-    gap: 3rem;
+    gap: var(--gap-lg);
+    font-size: var(--fs-2xl);
 }
 
 .aboutDetailContainers {
     display: flex;
-    gap: 2rem;
+    gap: var(--gap-lg);
+    font-size: var(--fs-lg);
 }

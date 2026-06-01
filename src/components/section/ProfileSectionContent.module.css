@@ -7,7 +7,7 @@
     align-items: center;
     max-height: 100%;
     height: 100%;
-    gap: 10rem;
+    gap: var(--gap-3xl);
     padding: 0;
 }
 
@@ -36,12 +36,12 @@
 .profileButtonContainer {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: var(--gap-md);
+    margin-top: var(--mp-md);
 }
 
 .profileButton {
-    padding: 0.8rem 0.5rem;
+    padding: var(--mp-md) var(--mp-xm);
     background-color: var(--bg-color);
     color: var(--contrast-color);
     border: var(--contrast-color) var(--border-profile-button);
@@ -71,7 +71,7 @@
 .socialButtonContainer {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--gap-md);
     margin-top: 0.8rem;
 }
 

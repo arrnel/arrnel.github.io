@@ -42,17 +42,17 @@ body.dark {
 
 .markdownContainer h2 {
     font-size: var(--font-size-markdown-h2);
-    margin-top: 0.8rem;
+    margin-top: var(--mp-md);
 }
 
 .markdownContainer h3 {
     font-size: var(--font-size-markdown-h3);
-    margin-top: 0.6rem;
+    margin-top: var(--mp-xm);
 }
 
 .markdownContainer h4 {
     font-size: var(--font-size-markdown-h4);
-    margin-top: 0.4rem;
+    margin-top: var(--mp-xs);
 }
 
 .markdownContainer p,
@@ -62,7 +62,7 @@ body.dark {
 
 .markdownContainer ul,
 .markdownContainer ol {
-    padding-left: 2rem;
+    padding-left: var(--mp-lg);
     font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
 }
 
@@ -78,7 +78,7 @@ body.dark {
 }
 
 .markdownContainer pre:has(> code) {
-    padding: 1rem;
+    padding: var(--mp-md);
     background-color: var(--block-code-bg);
     border: var(--block-code-border);
     border-radius: 1rem;

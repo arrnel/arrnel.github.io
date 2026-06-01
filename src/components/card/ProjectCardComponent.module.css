@@ -5,13 +5,13 @@
     max-width: 700px;
     min-width: 400px;
     width: 100%;
-    padding: 2rem;
+    padding: var(--mp-lg);
     background-color: var(--card-bg);
     overflow: hidden;
     border: var(--border-profile-button);
     border-radius: 2rem;
     transition: transform var(--transition);
-    gap: 2rem;
+    gap: var(--gap-lg);
 }
 
 .projectCard img {
@@ -31,16 +31,12 @@
     width: 95%;
     min-height: 3rem;
     color: var(--bg-color);
-    font-size: var(--font-size-section-description);
+    font-size: var(--fs-xl);
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: var(--mp-xm) var(--mp-md);
     border-radius: 2rem;
     cursor: pointer;
     transition: opacity var(--transition);
-}
-
-.projectCard h3 {
-    font-size: 1.3rem;
 }
 
 .projectCard button:hover {

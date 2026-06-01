@@ -7,20 +7,52 @@
     --position-color: #5e5e5e;
     --light-contrast: rgb(85, 85, 85);
 
+
+
+    /*NEW*/
+
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    --radius-full: 9999px;
+
+    --transition-default: all 0.2s ease;
+    --transition-slow: all 0.3s ease;
+
+    --gap-xs: 0.25rem;
+    --gap-xm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 2rem;
+    --gap-xl: 5rem;
+    --gap-2xl: 8rem;
+    --gap-3xl: 10rem;
+
+    --mp-xs: 0.25rem;
+    --mp-xm: 0.5rem;
+    --mp-md: 1rem;
+    --mp-lg: 2rem;
+    --mp-xl: 5rem;
+    --mp-2xl: 8rem;
+    --mp-3xl: 10rem;
+
+    --fs-xs: 0.5rem;
+    --fs-xm: 0.75rem;
+    --fs-md: 0.875rem;
+    --fs-lg: 1rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 2rem;
+    --fs-4xl: 2.5rem;
+    --fs-5xl: 3rem;
+    --fs-6xl: 5rem;
+
+    /*OLD*/
     --icon-width-small: 32px;
     --icon-width-medium: 48px;
     --icon-width-big: 64px;
 
     --fonts: "Poppins", "Montserrat";
-
-    --font-size-logo: 2rem;
-    --font-size-header: 1.5rem;
-    --font-size-h1: 3rem;
-    --font-size-h2: 2rem;
-    --font-size-h3: 1.75rem;
-    --font-size-h4: 1.25rem;
-    --font-size-section-description: 1.25rem;
-    --font-size-small: 0.8rem;
 
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -41,6 +73,45 @@
     --transition: all 300ms ease;
 }
 
+@media (max-width: 1280px) {
+    :root {
+
+        --fs-xs: 0.4rem;
+        --fs-xm: 0.6rem;
+        --fs-md: 0.75rem;
+        --fs-lg: 0.875rem;
+        --fs-xl: 1rem;
+        --fs-2xl: 1.25rem;
+        --fs-3xl: 1.5rem;
+        --fs-4xl: 2rem;
+        --fs-5xl: 2.5rem;
+        --fs-6xl: 3rem;
+
+        --gap-xs: 0.2rem;
+        --gap-xm: 0.3rem;
+        --gap-md: 0.5rem;
+        --gap-lg: 1rem;
+        --gap-xl: 2rem;
+        --gap-2xl: 5rem;
+        --gap-3xl: 8rem;
+
+        --mp-xs: 0.2rem;
+        --mp-xm: 0.3rem;
+        --mp-md: 0.5rem;
+        --mp-lg: 1rem;
+        --mp-xl: 2rem;
+        --mp-2xl: 5rem;
+        --mp-3xl: 8rem;
+
+        --min-image-width: 200px;
+        --max-image-width: 300px;
+        --image-border-radius-small: 3rem;
+        --image-border-radius-medium: 5rem;
+        --image-border-radius-large: 7rem;
+
+    }
+}
+
 body.dark {
     --bg-color: #1e1e1e;
     --text-color: #f0f0f0;
@@ -51,20 +122,20 @@ body.dark {
 }
 
 h1 {
-    font-size: var(--font-size-h1);
+    font-size: var(--fs-5xl);
     font-weight: var(--font-weight-bold);
 }
 
 h2 {
-    font-size: var(--font-size-h2);
+    font-size: var(--fs-4xl);
 }
 
 h3 {
-    font-size: var(--font-size-h3);
+    font-size: var(--fs-3xl);
 }
 
 h4 {
-    font-size: var(--font-size-h4);
+    font-size: var(--fs-2xl);
 }
 
 a {
@@ -127,8 +198,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    padding: 5rem 0;
-    margin-top: 5rem;
+    padding: var(--mp-xl) 0;
+    margin-top: var(--mp-xl);
     box-sizing: border-box;
     text-align: center;
     height: fit-content;
@@ -181,7 +252,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: var(--gap-xl);
 }
 
 /* PROJECTS */
@@ -190,7 +261,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: var(--gap-xl);
     max-width: 100%;
 }
 
@@ -219,7 +290,7 @@ footer {
     height: fit-content;
     min-height: var(--footer-height);
     max-height: var(--footer-height);
-    padding-bottom: 0.9rem;
+    padding-bottom: var(--mp-md);
     color: var(--contrast-color);
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -230,12 +301,12 @@ footer {
     .header {
         flex-direction: column;
         align-items: stretch;
-        padding: 1rem;
+        padding: var(--mp-md);
     }
 
     .nav-menu {
         justify-content: center;
-        gap: 1rem;
+        gap: var(--gap-md);
         flex-wrap: wrap;
     }
 
@@ -244,16 +315,12 @@ footer {
     }
 
     main {
-        padding: 1rem;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
+        padding: var(--mp-md);
     }
 
     .experience-item {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: var(--gap-xm);
     }
 
     .experience-dates {
@@ -265,7 +332,7 @@ footer {
     }
 
     .modal-content {
-        padding: 1.5rem;
+        padding: var(--mp-lg);
     }
 
     .slider img {
@@ -281,7 +348,7 @@ footer {
     .nav-menu {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: var(--gap-xm);
     }
 
     .nav-menu button {

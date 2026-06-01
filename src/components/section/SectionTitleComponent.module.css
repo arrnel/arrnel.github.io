@@ -4,11 +4,6 @@
     justify-content: center;
 }
 
-.sectionTitle {
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-bold);
-}
-
 .sectionDescription {
-    font-size: var(--font-size-section-description);
+    font-size: var(--fs-xl);
 }

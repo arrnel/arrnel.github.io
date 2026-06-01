@@ -5,11 +5,11 @@
     flex: 1 1 47%;
     max-width: 700px;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: var(--gap-lg);
     background-color: var(--card-bg);
     border: var(--border-profile-button);
     border-radius: 2rem;
-    padding: 1.5rem;
+    padding: var(--mp-lg);
     transition: transform var(--transition);
     text-align: center;
     color: var(--contrast-color);
@@ -17,8 +17,8 @@
 
 .experiencePosition {
     flex: 1 1 100%;
-    font-size: var(--font-size-h3);
-    margin-bottom: 0.5rem;
+    font-size: var(--fs-3xl);
+    margin-bottom: var(--mp-xs);
 }
 
 .experienceCompany {
@@ -33,7 +33,7 @@
 
 .experienceShortDescription {
     flex: 1;
-    margin-top: 0.5rem;
+    margin-top: var(--mp-xm);
     text-align: justify;
     width: 100%;
 }
@@ -43,10 +43,10 @@
     text-align: initial;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 2rem;
+    gap: var(--gap-lg);
     justify-content: space-around;
-    margin: 0.8rem 0;
-    padding: 0 2rem;
+    margin: var(--mp-xs) 0;
+    padding: 0 var(--mp-md);
 }
 
 .skillButton {
@@ -54,7 +54,7 @@
     max-width: 13.5rem;
     max-height: 3rem;
     justify-content: normal;
-    gap: 0.4rem;
+    gap: var(--gap-xm);
     color: var(--contrast-color);
 }
 
@@ -67,9 +67,9 @@
     width: 95%;
     min-height: 3rem;
     color: var(--bg-color);
-    font-size: var(--font-size-section-description);
+    font-size: var(--fs-xl);
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: var(--mp-xm) var(--mp-md);
     border-radius: 2rem;
     cursor: pointer;
     transition: opacity var(--transition);
