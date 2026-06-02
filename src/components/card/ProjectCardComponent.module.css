@@ -46,8 +46,21 @@
 .projectCardModal {
     max-width: 80%;
     max-height: 75vh;
+    min-width: 480px;
 }
 
 .moreButton {
     margin-top: auto;
+}
+
+@media (max-width: 800px) {
+    .projectCardModal {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    .projectCardModal {
+        max-width: 90%;
+    }
 }

@@ -112,6 +112,45 @@
     }
 }
 
+@media (max-width: 800px) {
+    :root {
+
+        --fs-xs: 0.35rem;
+        --fs-xm: 0.5rem;
+        --fs-md: 0.6rem;
+        --fs-lg: 0.75rem;
+        --fs-xl: 0.895rem;
+        --fs-2xl: 1rem;
+        --fs-3xl: 1.25rem;
+        --fs-4xl: 1.5rem;
+        --fs-5xl: 2rem;
+        --fs-6xl: 2.5rem;
+
+        --gap-xs: 0.2rem;
+        --gap-xm: 0.3rem;
+        --gap-md: 0.5rem;
+        --gap-lg: 1rem;
+        --gap-xl: 2rem;
+        --gap-2xl: 5rem;
+        --gap-3xl: 8rem;
+
+        --mp-xs: 0.2rem;
+        --mp-xm: 0.3rem;
+        --mp-md: 0.5rem;
+        --mp-lg: 1rem;
+        --mp-xl: 2rem;
+        --mp-2xl: 5rem;
+        --mp-3xl: 8rem;
+
+        --min-image-width: 200px;
+        --max-image-width: 300px;
+        --image-border-radius-small: 3rem;
+        --image-border-radius-medium: 5rem;
+        --image-border-radius-large: 7rem;
+
+    }
+}
+
 body.dark {
     --bg-color: #1e1e1e;
     --text-color: #f0f0f0;
@@ -120,11 +159,6 @@ body.dark {
     --contrast-color: #f9f9f9;
     --position-color: #9f9f9f;
 }
-
-body {
-    min-width: 450px;
-}
-
 
 h1 {
     font-size: var(--fs-5xl);
@@ -168,6 +202,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    min-width: 450px;
 }
 
 a,

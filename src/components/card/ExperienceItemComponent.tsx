@@ -72,7 +72,7 @@ const ExperienceItemComponent: React.FC<{ experience: Experience, experienceNumb
                                 src={skill.image}
                                 alt={t(skill.title) + " icon"}
                             />
-                            <h4>{t(skill.title)}</h4>
+                            <p className={styles.skillTitle}>{t(skill.title)}</p>
                         </button>
                     ))}
             </div>
