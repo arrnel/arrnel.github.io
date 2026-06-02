@@ -42,7 +42,7 @@
     border: none;
     cursor: pointer;
     padding: var(--mp-xm);
-    z-index: 1001;
+    z-index: 999;
 }
 
 .burgerLine {

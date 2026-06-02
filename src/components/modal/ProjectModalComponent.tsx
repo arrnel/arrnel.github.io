@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import type {Project} from '../../model/Project.ts';
 import styles from './ProjectModalComponent.module.css'
@@ -30,7 +30,19 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
 
     const { t } = useTranslation();
     const analytics = useAnalytics();
-    const [layout, setLayout] = useState<'horizontal' | 'vertical'>('horizontal');
+    const horizontalMinWidth = 800;
+    const [isNarrow, setIsNarrow] = useState(window.innerWidth <= horizontalMinWidth);
+    const [userPreference, setUserPreference] = useState<'horizontal' | 'vertical' | null>(null);
+
+    const layout = isNarrow ? 'vertical' : (userPreference ?? 'horizontal');
+
+    useEffect(() => {
+        const handleResize = () => setIsNarrow(window.innerWidth <= horizontalMinWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
 
     let projectTitleComponent = <></>;
     if (project.title?.trim()) {
@@ -47,7 +59,8 @@ const ProjectModalComponent: React.FC<ProjectModalContentProps> = ({ project }) 
     const aspectRatio = isHorizontal ? '1 / 1' : undefined;
 
     const toggleLayout = () => {
-        setLayout(prev => (prev === 'horizontal' ? 'vertical' : 'horizontal'));
+        if (isNarrow) return; // кнопка скрыта при узком экране, но предохраняемся
+        setUserPreference(layout === 'horizontal' ? 'vertical' : 'horizontal');
     };
 
     const handleProjectLinkClick = (projectTitle: string, link_type: string, url: string) => {

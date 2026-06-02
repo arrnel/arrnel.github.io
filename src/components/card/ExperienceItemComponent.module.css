@@ -53,13 +53,18 @@
     display: flex;
     max-width: 13.5rem;
     max-height: 3rem;
-    justify-content: normal;
+    align-items: center;
     gap: var(--gap-xm);
     color: var(--contrast-color);
 }
 
 .skillIcon {
     max-width: 48px;
+}
+
+.skillTitle {
+    font-size: var(--fs-lg);
+    font-weight: var(--font-weight-bold);
 }
 
 .moreButton {
@@ -83,4 +88,16 @@
 .experienceModal {
     max-width: 50%;
     max-height: 50%;
+}
+
+@media (max-width: 800px) {
+    .experienceModal {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    .experienceModal {
+        max-width: 90%;
+    }
 }

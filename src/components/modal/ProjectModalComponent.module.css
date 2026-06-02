@@ -104,8 +104,8 @@
 .layoutSwitcher {
     display: inline-flex;
     position: absolute;
-    top: 65px;
-    left: 65px;
+    top: 3.25rem;
+    left: 3.25rem;
     background-color: var(--card-bg);
     border: 1px solid var(--contrast-color);
     border-radius: var(--image-border-radius-medium);
@@ -114,6 +114,7 @@
     cursor: pointer;
     align-self: center;
     opacity: 0.35;
+    gap: var(--gap-xs);
 }
 
 .layoutSwitcher:hover,
@@ -122,8 +123,8 @@
 }
 
 .switchOption {
-    width: 32px;
-    height: 32px;
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,4 +137,25 @@
     background-color: var(--contrast-color);
     color: var(--bg-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+@media(max-width: 1280px) {
+    .layoutSwitcher {
+        top: 1.8rem;
+        left: 1.8rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .layoutSwitcher {
+        top: 1.6rem;
+        left: 1.6rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .layoutSwitcher {
+        display: none;
+    }
 }
