@@ -1,7 +1,7 @@
 import type {AnalyticsService} from "./analytics.types.ts";
 import {ANALYTIC_EVENT} from "./analytics.events.ts";
 import {ReactTagManager} from "react-gtm-ts";
-import {Section} from "../model/Section.ts";
+import {Section} from "../../model/Section.ts";
 
 declare global {
     interface Window {

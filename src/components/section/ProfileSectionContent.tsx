@@ -4,6 +4,7 @@ import type {Profile} from "../../model/Profile.ts";
 import {Section} from "../../model/Section.ts";
 import i18n from "../../i18n.ts";
 import {useAnalytics} from "../../hook/useAnalytics.ts";
+import {useCvDownloader} from "../../hook/useCvDownloader.ts";
 
 const ProfileSectionContent: React.FC<{
     profile: Profile;
@@ -13,6 +14,7 @@ const ProfileSectionContent: React.FC<{
     const lang = i18n.language;
 
     const analytics = useAnalytics();
+    const cvDownloader = useCvDownloader();
 
     const handleNavigateToContactsClick = () => {
         document.getElementById(Section.CONTACTS)?.scrollIntoView({
@@ -21,8 +23,8 @@ const ProfileSectionContent: React.FC<{
     };
 
     const handleDownloadCV = () => {
-        window.open(`/assets/cv/cv_${lang}.pdf`, '_blank');
         analytics.downloadCvEvent(lang);
+        cvDownloader.navigateToDownloadFilePage();
     };
 
     const handleContactClick = (contactId: string, url: string) => {
