@@ -218,7 +218,6 @@ function ghaUrl(repoName:string) {
     return `https://github.com/${VITE_REPO_OWNER}/${repoName}/actions`
 }
 
-
 // Project Images Paths
 function projectLogoPath(projectTitle: string): string {
     return `/assets/project/${projectTitle}/logo.png`.toLowerCase();
