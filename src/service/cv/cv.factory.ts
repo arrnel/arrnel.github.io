@@ -2,7 +2,7 @@ import {LocalFileDownloader} from "./local.cv.downloader.ts";
 import {GoogleDriveDownloader} from "./google-drive.downloader.ts";
 import type {BaseFileDownloader} from "./base.file-downloader.ts";
 
-const providerEnv = import.meta.env.VITE_DOWNLOAD_CV_PROVIDER.toLowerCase();
+const providerEnv = (import.meta.env.VITE_DOWNLOAD_CV_PROVIDER).toLowerCase();
 let downloadCvProvider: BaseFileDownloader;
 
 export const CV_DOWNLOADER_TYPE = {
