@@ -56,10 +56,14 @@ jobs:
           VITE_BANK_REPORT_EXAMPLE: ${{ vars.BANK_REPORT_EXAMPLE }}
           VITE_AE_REPORT_EXAMPLE: ${{ vars.AE_REPORT_EXAMPLE }}
           VITE_AE_PY_REPORT_EXAMPLE: ${{ vars.AE_PY_REPORT_EXAMPLE }}
-
           VITE_SOCIAL_TELEGRAM: ${{ vars.SOCIAL_TELEGRAM }}
+
           VITE_SOCIAL_LINKEDIN: ${{ vars.SOCIAL_LINKEDIN }}
           VITE_SOCIAL_EMAIL: ${{ vars.SOCIAL_EMAIL }}
+
+          VITE_DOWNLOAD_CV_PROVIDER: ${{ vars.DOWNLOAD_CV_PROVIDER }}
+          VITE_CV_URL_GOOGLE_EN: ${{ vars.CV_URL_GOOGLE_EN }}
+          VITE_CV_URL_GOOGLE_RU: ${{ vars.CV_URL_GOOGLE_RU }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
