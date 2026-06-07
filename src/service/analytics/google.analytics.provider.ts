@@ -1,38 +1,17 @@
-import type {AnalyticsService} from "./analytics.types.ts";
-import {ANALYTIC_EVENT} from "./analytics.events.ts";
-import {ReactTagManager} from "react-gtm-ts";
-import {Section} from "../../model/Section.ts";
-
-declare global {
-    interface Window {
-        gtag?: (...args: unknown[]) => void;
-    }
-}
+import type { AnalyticsService } from "./analytics.types.ts";
+import { ANALYTIC_EVENT } from "./analytics.events.ts";
+import ReactGA from "react-ga4";
+import { Section } from "../../model/Section.ts";
 
 export class GoogleAnalyticsProvider implements AnalyticsService {
-
     constructor() {
-        ReactTagManager.init({
-            code: import.meta.env.VITE_GTM_ID,
-            debug: false,
-            performance: false,
-        });
+        ReactGA.initialize(import.meta.env.VITE_GA4_ID);
     }
 
-    private sendEvent(
-        event: string,
-        params?: Record<string, unknown>,
-    ): void {
-        console.log(
-            '[GA] sendEvent:',
-            event,
-            params,
-        );
+    private sendEvent(event: string, params?: Record<string, unknown>): void {
+        console.log("[GA] sendEvent:", event, params);
 
-        ReactTagManager.action({
-            event: event,
-            params: params,
-        })
+        ReactGA.gtag("event", event, params);
     }
 
     changeLanguageEvent(lang: string): void {
@@ -46,8 +25,8 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
             section: {
                 viewed_sections: {
                     [section]: true,
-                }
-            }
+                },
+            },
         });
     }
 
@@ -56,8 +35,8 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
             section: {
                 profile: {
                     download_cv: lang,
-                }
-            }
+                },
+            },
         });
     }
 
@@ -67,9 +46,9 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
                 [Section.EXPERIENCE]: {
                     [experienceTitle]: {
                         viewed: true,
-                    }
-                }
-            }
+                    },
+                },
+            },
         });
     }
 
@@ -79,24 +58,23 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
                 [Section.PROJECTS]: {
                     [projectTitle]: {
                         viewed: true,
-                    }
-                }
-            }
+                    },
+                },
+            },
         });
     }
 
     navigateByProjectLinkEvent(projectTitle: string, linkType: string): void {
-
         this.sendEvent(ANALYTIC_EVENT.NAVIGATE_BY_PROJECT_LINK, {
             section: {
                 projects: {
                     [projectTitle]: {
                         links: {
                             [linkType]: true,
-                        }
-                    }
-                }
-            }
+                        },
+                    },
+                },
+            },
         });
     }
 
@@ -106,10 +84,10 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
                 projects: {
                     [projectTitle]: {
                         carousel: true,
-                    }
-                }
-            }
-        })
+                    },
+                },
+            },
+        });
     }
 
     navigateByProfileContactEvent(contactTitle: string): void {
@@ -117,10 +95,10 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
             section: {
                 profile: {
                     contact: {
-                        [contactTitle]: true
-                    }
-                }
-            }
+                        [contactTitle]: true,
+                    },
+                },
+            },
         });
     }
 
@@ -129,11 +107,10 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
             section: {
                 contacts: {
                     contact: {
-                        [contactTitle]: true
-                    }
-                }
-            }
+                        [contactTitle]: true,
+                    },
+                },
+            },
         });
     }
-
 }
