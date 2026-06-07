@@ -48,8 +48,8 @@ jobs:
           VITE_REPO_OWNER: ${{ github.repository_owner }}
           VITE_REPO_ROCOCO: ${{ vars.REPO_ROCOCO }}
           VITE_REPO_BANK: ${{ vars.REPO_BANK }}
-          VITE_REPO_AE: ${{ vars.REPO_ROCOCO }}
-          VITE_REPO_AE_PY: ${{ vars.REPO_ROCOCO }}
+          VITE_REPO_AE: ${{ vars.REPO_AE }}
+          VITE_REPO_AE_PY: ${{ vars.REPO_AE_PY }}
           VITE_REPO_RESUME: ${{ github.event.repository.name }}
 
           VITE_ROCOCO_REPORT_EXAMPLE: ${{ vars.ROCOCO_REPORT_EXAMPLE }}
