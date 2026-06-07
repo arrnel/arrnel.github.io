@@ -14,7 +14,7 @@ interface ImportMetaEnv {
     readonly VITE_SOCIAL_EMAIL: string;
     readonly VITE_ANALYTICS_DEBUG: boolean;
     readonly VITE_ANALYTICS_PROVIDER: string;
-    readonly VITE_GTM_ID: string;
+    readonly VITE_GA4_ID: string;
     readonly VITE_DOWNLOAD_CV_PROVIDER: string;
     readonly VITE_CV_URL_GOOGLE_EN: string;
     readonly VITE_CV_URL_GOOGLE_RU: string;
