@@ -5,13 +5,18 @@ import ReactGA from "react-ga4";
 export class GoogleAnalyticsProvider implements AnalyticsService {
     constructor() {
         const measurementId = import.meta.env.VITE_GA4_ID;
-        if (measurementId) {
-            ReactGA.initialize(measurementId);
-        } else {
+        if (!measurementId) {
             console.warn(
                 'GA4 measurement ID (VITE_GA4_ID) is not defined. Analytics will not be initialized.'
             );
+            return;
         }
+
+        ReactGA.initialize(measurementId, {
+            gaOptions: {
+                cookieDomain: import.meta.env.DEV ? 'none' : 'auto',
+            },
+        });
     }
 
     // private sendEvent(event: string, params?: Record<string, unknown>): void {
@@ -123,6 +128,10 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     // }
 
     private sendEvent(eventName: string, params?: Record<string, any>) {
+        if (!ReactGA.isInitialized) {
+            console.warn('ReactGA is not initialized. Event not sent:', eventName);
+            return;
+        }
         ReactGA.event(eventName, params);
     }
 
