@@ -128,13 +128,17 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
     // }
 
     private sendEvent(eventName: string, params?: Record<string, any>) {
+
         if (!ReactGA.isInitialized) {
             console.warn('ReactGA is not initialized. Event not sent:', eventName);
             return;
         }
         params ??= {}
         params["cookieFlags"] = 'SameSite=None; Secure';
+
+        console.log("[GA] sendEvent:", eventName, params);
         ReactGA.event(eventName, params);
+
     }
 
     changeLanguageEvent(lang: string): void {
