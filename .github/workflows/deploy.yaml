@@ -43,7 +43,7 @@ jobs:
         env:
           VITE_ANALYTICS_DEBUG: ${{ vars.ANALYTICS_DEBUG }}
           VITE_ANALYTICS_PROVIDER: ${{ vars.ANALYTICS_PROVIDER }}
-          VITE_GTM_ID: ${{ vars.GTM_ID }}
+          VITE_GA4_ID: ${{ vars.GA4_ID }}
 
           VITE_REPO_OWNER: ${{ github.repository_owner }}
           VITE_REPO_ROCOCO: ${{ vars.REPO_ROCOCO }}
