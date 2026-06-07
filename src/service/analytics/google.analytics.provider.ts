@@ -132,6 +132,8 @@ export class GoogleAnalyticsProvider implements AnalyticsService {
             console.warn('ReactGA is not initialized. Event not sent:', eventName);
             return;
         }
+        params ??= {}
+        params["cookieFlags"] = 'SameSite=None; Secure';
         ReactGA.event(eventName, params);
     }
 
