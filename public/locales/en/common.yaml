@@ -44,10 +44,31 @@ experience:
       company: '"INFORMATION TECHNOLOGY CENTER" OF THE CHUVASH REPUBLIC'
       short_description: |
         Provided the operation of telecommunications and computer equipment
-        for the executive authorities and local self-government of the Chuvash Republic.
+        for the executive authorities and local self-government of the Chuvash Republic. Managed virtual environments,
+        including resource migration and optimization. I installed software, diagnosed and resolved hardware and
+        software issues on workstations. I maintained documentation in a Helpdesk system, created user guides, and
+        trained new team members. Additionally, I configured monitoring systems and worked with databases to support
+        critical services.
       description: |
-        Provided the operation of telecommunications and computer equipment
-        for the executive authorities and local self-government of the Chuvash Republic.
+        ## **System Engineer | "Information Technology Center" of the Chuvash Republic**
+        11.2019 - 11.2023
+        
+        ## **Skills**
+        * **Manual testing**: Insomnia/Postman, SOAP UI, Fiddler/Charles, DevTools
+        * **Virtualization**: VMware vSphere (ESXi, vCenter)
+        * **Monitoring**: Zabbix
+        * **Databases**: PostgreSQL
+        * **OS and terminals**: Windows, Linux (Bash/Shell)
+        * **Documentation**: iTop Helpdesk
+        * **Other**: Active Directory, Kaspersky Endpoint Security
+      
+        **Responsibilities**:
+        - Manual testing of websites of executive authorities and local self‑government bodies of the Chuvash Republic
+        - User administration, as well as data center administration for 112 services in Active Directory and Kaspersky Endpoint Security
+        - Storage management, migration and resource optimization in VMware vSphere
+        - Software installation, diagnostics and troubleshooting on PCs
+        - Creating instructions and training new colleagues
+
     '1':
       position: Full-stack QA Engineer
       company: ROSELTORG
@@ -135,111 +156,86 @@ experience:
     '2':
       position: QA Automation Engineer
       company: NDA
-      short_description: Text
+      short_description: |
+        Built test automation from scratch, while also maintaining and enhancing existing test frameworks. Implemented
+        a retry mechanism for flaky tests and set up pipelines for seamless integration of automated tests into the
+        development CI/CD. Beyond automation, contributed to backend development on Spring Boot 3.2 (fixing database
+        queries, validators, exception handlers) and added API endpoints for testing needs. Analyzed logs, configured
+        test environments, conducted automation audits, and mentored juniors.
       description: |
-        ## **QA Automation Engineer | *NDA***  
-        *Aug 2023 – Present*  
-
-        ## **Technical Skills**  
-        #### ***Java***  
-        - **Language**: Java 21  
-        - **Build tool**: Gradle  
-        - **Test framework**: JUnit 5  
-        - **Configuration**: Owner  
-        - **Database**: PostgreSQL, Spring-JDBC  
-        - **API testing**: Retrofit, REST Assured  
-        - **UI testing**: Selenide, Playwright  
-        - **Inter-service communication**: Kafka, gRPC  
-        - **Environment**: Docker  
-        - **Reporting**: Allure Report  
-        - **CI/CD**: GitLab CI  
-        - **Logging**: Kibana, Grafana  
-        - **Documentation**: YouTrack, Confluence  
-
-        #### ***Python***  
-        - **Language**: Python 3.12+  
-        - **Build tool**: Poetry  
-        - **Test framework**: Pytest  
-        - **Configuration**: Pydantic v2  
-        - **Database**: PostgreSQL, SQLAlchemy  
-        - **API testing**: Httpx  
-        - **UI testing**: Selene  
-        - **Environment**: Docker  
-        - **Reporting**: Allure Report  
-        - **CI/CD**: GitLab CI  
-
-        ### **Project 1**  
-        **Achievements**  
-        - Closed the test automation gap  
-        - Introduced a retry mechanism for flaky tests  
-        - Integrated automated test execution into the CI/CD pipeline  
-
-        **Responsibilities**  
-        - Conducted functional, non-functional, smoke, and exploratory testing  
-        - Automated tests  
-        - Analyzed logs and test run results  
-
-        ### **Project 2**  
-        **Achievements**  
-        - Increased test automation coverage from 35% to 82%  
-        - Developed automated tests from scratch for new functionality within an existing project  
-        - Introduced Pytest fixtures for test data reuse  
-        - Reduced regression testing time by 50%  
-        - Implemented Page Object architecture for UI tests  
-        - Implemented API testing using Httpx  
-        - Configured parallel test execution via pytest-xdist  
-        - Introduced dynamic test data generation  
-        - Implemented testing of asynchronous services  
-        - Configured test logging  
-        - Introduced Allure reporting for Python tests  
-        - Reduced flaky tests by 40%  
-        - Configured message queue testing  
-        - Developed rollback scenario testing  
-        - Implemented automatic test data cleanup  
-        - Extended the CI pipeline  
-
-        **Responsibilities**  
-        - Developed automated tests in Python (Pytest)  
-        - Developed UI tests with Selene  
-        - Developed API tests using Httpx  
-        - Maintained the existing test framework  
-        - Worked with PostgreSQL via SQLAlchemy  
-        - Wrote SQL queries  
-        - Generated test data  
-        - Worked with Pydantic configurations  
-        - Configured pytest fixtures  
-        - Maintained CI/CD pipelines  
-        - Optimized test execution time  
-        - Worked with Docker containers  
-        - Wrote integration tests  
-        - Tested microservices  
-        - Worked with logs  
-        - Analyzed test failures  
-        - Developed Page Object models  
-        - Maintained test documentation  
-        - Performed code review of automated tests  
-        - Worked with asynchronous services  
-        - Configured test environments  
-        - Developed data-driven tests  
-        - Worked with test data  
-
-        ### **Project 3**  
-        **Achievements**  
-        - Built an automated testing project from scratch (DB + API + UI + Kafka) with CI/CD test execution  
-        - Tackled simple backend development tasks  
-
-        **Responsibilities**  
-        - Conducted functional, non-functional, smoke, and exploratory testing  
-        - Automated tests  
-        - Analyzed logs and test run results  
-
-        ### **Cross-Project Contributions**  
-        - Participated in test strategy development  
-        - Configured test environments  
-        - Performed test automation audits  
-        - Mentored junior QA automation engineers  
-        - Configured CI/CD pipelines  
-        - Optimized test infrastructure
+        ## **QA Automation | *NDA***
+        08.2023 - Present
+        
+        ## **Skills**
+        #### ***Java***:
+        * **Language**: Java 21
+        * **Build tool**: Gradle
+        * **Test framework**: JUnit 5
+        * **Configuration**: Owner
+        * **Database**: PostgreSQL, Spring-JDBC
+        * **API**: Retrofit, Rest Assured
+        * **UI**: Selenide, Playwright
+        * **Inter-service communication**: Kafka, gRPC
+        * **Environment**: Docker
+        * **Reporting**: Allure Report
+        * **CI/CD**: GitLab CI
+        * **Monitoring & Logging**: Grafana, Kibana
+        * **Documentation**: Youtrack, Confluence
+      
+        #### ***Python***:
+        * **Language**: Python 3.12+
+        * **Build tool**: Poetry
+        * **Test framework**: Pytest
+        * **Configuration**: Pydantic v2
+        * **Database**: PostgreSQL, SQLAlchemy
+        * **API**: Httpx
+        * **UI**: Selene
+        * **Environment**: Docker
+        * **Reporting**: Allure Report
+        * **CI/CD**: GitLab CI
+      
+        ### **Project 1**
+        **Achievements:**
+        * Fulfilled the test automation needs
+        * Implemented a retry mechanism for flaky tests
+        * Developed pipelines for seamless integration of automated tests into development pipelines
+        
+        **Responsibilities:**
+        * Performed functional, non‑functional, smoke, and exploratory testing
+        * Developed and maintained UI, API, and E2E automated tests
+        * Analyzed logs and test execution results
+        * Mentored a Junior QA Automation Engineer to eventually hand over the project
+      
+        ### **Project 2**
+        **Achievements:**
+        * Self‑taught Python automation to address project needs
+        * Increased test automation coverage from 35% to 82%
+        * Reduced regression testing time by 50%
+        * Integrated automated tests into CI/CD
+        
+        **Responsibilities:**
+        * Developed and maintained UI, API, database, and E2E automated tests
+        * Analyzed logs and test execution results
+        * Created automated test pipelines in GitLab CI
+      
+        ### **Project 3**
+        **Achievements:**
+        * Built an automation project from scratch (database + API + UI + gRPC) with test execution in CI/CD  
+        * In addition to test automation, contributed to backend development (Spring Boot 3.2):  
+            – Fixed defects in database queries, implemented new model validators and exception handlers with mandatory unit test coverage  
+            – Designed and added API endpoints/features required for efficient test automation (e.g., endpoints for test data management)  
+        
+        **Responsibilities:**
+        * Developed and maintained database, API, UI, gRPC, and E2E tests
+        * Analyzed logs and test execution results
+        
+        ### **Contributions to Other Projects**
+        * Participated in test strategy development
+        * Configured test environments
+        * Conducted test automation audits
+        * Mentored Junior QA Automation Engineers
+        * Set up CI/CD pipelines
+        * Optimised test infrastructure
 
 projects:
   description: Browse My
