@@ -3,55 +3,84 @@
     display: inline-block;
 }
 
-.select {
+.selectButton {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    gap: var(--gap-xm);
     padding: var(--mp-xm) var(--mp-md);
     background-color: var(--bg-color);
-    color: var(--contrast-color, #e2e8f0);
+    color: var(--contrast-color);
     border: var(--border-profile-button) var(--contrast-color);
-    border-radius: 2rem;
-    text-align: center;
+    border-radius: var(--image-border-radius-small);
     font-size: var(--fs-2xl);
     line-height: 1.4;
-    appearance: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    text-align-last: center;
+    white-space: nowrap;
+    font-family: inherit;
+    appearance: none;
 }
 
-.select:focus {
+.selectButton:focus-visible {
     outline: none;
     opacity: 0.8;
     box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.18);
 }
 
-.select::-ms-expand {
-    display: none;
-    border: var(--border-profile-button) var(--contrast-color);
-    border-radius: 2rem;
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 0.35em solid transparent;
+    border-right: 0.35em solid transparent;
+    border-top: 0.45em solid currentColor;
+    transition: transform 0.2s ease;
 }
 
-.select::after {
-    content: '▼';
+.selectButton[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);
+}
+
+.optionsList {
     position: absolute;
-    right: 0.9rem;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    font-size: var(--fs-xm);
-    transition: all 0.2s ease;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0.4rem 0;
+    list-style: none;
+    background-color: var(--bg-color);
+    color: var(--contrast-color, #e2e8f0);
+    border: var(--border-profile-button) var(--contrast-color);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    min-width: 100%;
+    white-space: nowrap;
 }
 
-.select option {
+.option {
+    padding: 0.5rem 1.2rem;
     text-align: center;
+    cursor: pointer;
+    font-size: var(--fs-xl);
+    line-height: 1.4;
+    transition: background-color 0.15s;
+}
 
+.option:hover,
+.option:focus-visible {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.optionSelected {
+    font-weight: 600;
+    background-color: rgba(96, 165, 250, 0.15);
 }
 
 @media (max-width: 480px) {
-
-    .select {
+    .selectButton {
         font-size: var(--fs-md);
         padding: var(--mp-xm) var(--mp-lg) var(--mp-xm) var(--mp-md);
     }

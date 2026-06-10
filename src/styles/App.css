@@ -7,10 +7,6 @@
     --position-color: #5e5e5e;
     --light-contrast: rgb(85, 85, 85);
 
-
-
-    /*NEW*/
-
     --radius-sm: 0.5rem;
     --radius-md: 1rem;
     --radius-lg: 1.5rem;
@@ -47,7 +43,6 @@
     --fs-5xl: 3rem;
     --fs-6xl: 5rem;
 
-    /*OLD*/
     --icon-width-small: 32px;
     --icon-width-medium: 48px;
     --icon-width-big: 64px;
