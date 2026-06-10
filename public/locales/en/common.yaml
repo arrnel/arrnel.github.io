@@ -31,8 +31,19 @@ about:
       <b>M.Sc.:</b> Applied Mathematics & Computer Science<br/>
       <b>B.Sc.:</b> Computer Information Systems & Database Management
   summary: |
-    Over 6 years of experience in e-procurement testing. I have expertise in manual testing and automation of UI and API,
-    plus configuring processes in CI/CD. I enjoy watching testing conference videos and am eager and prepared to gain new experiences and knowledge.
+    Hi, I’m Dmitry!<br/><br/>
+    SDET with 6+ years of experience in test automation API, UI, DB, Kafka, gRPC, CI/CD integration, and backend
+    contributions for web and microservice applications. Throughout my career, I’ve worked in both small product teams
+    and large distributed environments.<br/><br/>
+  
+    I’m comfortable working in environments with evolving or incomplete requirements. This has helped me develop strong
+    communication skills and the ability to collaborate effectively with developers, business analysts, project/product
+    managers, and cross-functional teams to clarify requirements and ensure product quality.<br/><br/>  
+
+    I consider myself a T-shaped QA engineer: while my core expertise is testing and automation, I continuously broaden
+    my technical knowledge. In my free time, I watch conference talks, study new tools and technologies, and apply what
+    I learn in both production work and personal pet projects (relevant projects are listed in the “Projects” section).  
+
 experience:
   description: Explore My
   title: Work Experience
