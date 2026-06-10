@@ -13,7 +13,7 @@ const AboutSectionContent: React.FC<{
     const transformText = useTextTransform();
 
     return (
-        <div className={`sectionContentContainer ${styles.aboutSectionContentWrapper}`}>
+        <div className={`sectionContentContainer ${styles.aboutSectionContentContainer}`}>
             <div className={styles.aboutImageContainer}>
                 <img src={about.image}
                      alt="About image"
@@ -34,7 +34,7 @@ const AboutSectionContent: React.FC<{
                     }
                 </div>
                 <div className="text-container">
-                    <p>{t(about.summary)}</p>
+                    <p className={styles.aboutSummary}>{transformText(about.summary)}</p>
                 </div>
             </div>
         </div>

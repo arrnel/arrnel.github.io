@@ -1,10 +1,10 @@
-.aboutSectionContentWrapper {
+.aboutSectionContentContainer {
     display: flex;
     min-height: 100%;
     justify-content: center;
     justify-items: center;
     align-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: var(--gap-xl);
 }
 
@@ -14,9 +14,8 @@
 }
 
 .aboutPic {
-    height: 100%;
     width: 100%;
-    border-radius: var(--image-border-radius-medium);
+    border-radius: var(--image-border-radius-small);
 }
 
 .aboutInfo {
@@ -37,9 +36,18 @@
     min-width: 250px;
 }
 
+.aboutSummary {
+    text-align: justify;
+    text-indent: var(--gap-md) each-line;
+}
+
 @media (max-width: 1100px) {
-    .aboutSectionContentWrapper {
+    .aboutSectionContentContainer {
         flex-direction: column;
+        gap: var(--gap-xl);
+        align-items: center;
+    }
+    .aboutInfo {
         gap: var(--gap-xl);
     }
 }

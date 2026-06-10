@@ -36,6 +36,7 @@
     margin-top: var(--mp-xm);
     text-align: justify;
     width: 100%;
+    text-indent: var(--gap-md) each-line;
 }
 
 .skillsContainer {

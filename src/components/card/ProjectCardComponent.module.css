@@ -43,6 +43,10 @@
     opacity: 0.9;
 }
 
+.projectShortDescription{
+    text-indent: var(--gap-md) each-line;
+}
+
 .projectCardModal {
     max-width: 80%;
     max-height: 75vh;
