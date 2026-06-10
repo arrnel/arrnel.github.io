@@ -22,7 +22,7 @@ const ProjectCardComponent: React.FC<{ project: Project }> = ({project}) => {
         <>
             <div className={styles.projectCard}>
                 <h3 className={styles.projectTitle}>{t(project.title)}</h3>
-                <p>{t(project.short_description)}</p>
+                <p className={styles.projectShortDescription}>{t(project.short_description)}</p>
                 <img src={project.logo} alt={t(project.title)}/>
                 <button className={styles.moreButton} onClick={() => handleProjectModalClick(project.id)}>
                     {t('buttons.more')}

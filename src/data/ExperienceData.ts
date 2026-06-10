@@ -83,24 +83,14 @@ export const EXPERIENCES_DATA: Experience[] = [
         start_date: '11.2018',
         end_date: '11.2019',
         skills: [
-            // JAVA
-            SKILLS[Skill.JAVA],
-            SKILLS[Skill.JUNIT5],
-            SKILLS[Skill.GRADLE],
-            SKILLS[Skill.SPRING_JDBC],
-            SKILLS[Skill.HIBERNATE],
-            SKILLS[Skill.RABBIT_MQ],
-            SKILLS[Skill.SOAP],
-            SKILLS[Skill.REST_ASSURED],
-            SKILLS[Skill.RETROFIT],
-            SKILLS[Skill.SELENIDE],
-            SKILLS[Skill.PLAYWRIGHT],
-            // PYTHON
-            SKILLS[Skill.PYTHON],
-            SKILLS[Skill.POETRY],
-            SKILLS[Skill.PYDANTIC],
-            SKILLS[Skill.HTTPX],
-            SKILLS[Skill.SELENE]
+            SKILLS[Skill.FUNCTIONAL_TESTING],
+            SKILLS[Skill.TERMINAL],
+            SKILLS[Skill.ZABBIX],
+            SKILLS[Skill.POSTGRESQL],
+            SKILLS[Skill.ACTIVE_DIRECTORY],
+            SKILLS[Skill.VSPHERE],
+            SKILLS[Skill.KES],
+            SKILLS[Skill.ITOP],
         ]
     },
 ];

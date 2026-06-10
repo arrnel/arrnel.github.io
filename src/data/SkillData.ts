@@ -2,6 +2,12 @@ import type {ImageLink} from "../model/ImageLink.ts";
 import {Skill} from "../model/Skill.ts";
 
 export const SKILLS: Record<string, ImageLink> = {
+    [Skill.FUNCTIONAL_TESTING]: {
+        id: Skill.FUNCTIONAL_TESTING,
+        title: Skill.FUNCTIONAL_TESTING,
+        url: "https://www.functionize.com/automated-testing/what-is-functional-testing",
+        image: "/assets/skill/functional_testing.svg"
+    },
     [Skill.JAVA]: {
         id: Skill.JAVA,
         title: Skill.JAVA,
@@ -187,5 +193,41 @@ export const SKILLS: Record<string, ImageLink> = {
         title: Skill.KIBANA,
         url: "https://www.elastic.co/docs/extend/kibana/development-getting-started",
         image: "/assets/skill/kibana.svg"
+    },
+    [Skill.ACTIVE_DIRECTORY]: {
+        id: Skill.ACTIVE_DIRECTORY,
+        title: Skill.ACTIVE_DIRECTORY,
+        url: "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/active-directory-overview",
+        image: "/assets/skill/active_directory.svg"
+    },
+    [Skill.VSPHERE]: {
+        id: Skill.VSPHERE,
+        title: Skill.VSPHERE,
+        url: "https://www.vmware.com/products/cloud-infrastructure/vsphere/resources",
+        image: "/assets/skill/vsphere.svg"
+    },
+    [Skill.ZABBIX]: {
+        id: Skill.ZABBIX,
+        title: Skill.ZABBIX,
+        url: "https://www.zabbix.com/manuals",
+        image: "/assets/skill/zabbix.svg"
+    },
+    [Skill.TERMINAL]: {
+        id: Skill.TERMINAL,
+        title: Skill.TERMINAL,
+        url: "https://ubuntu.com/tutorials/command-line-for-beginners",
+        image: "/assets/skill/terminal.svg"
+    },
+    [Skill.KES]: {
+        id: Skill.KES,
+        title: Skill.KES,
+        url: "https://support.kaspersky.ru/kes-for-windows/14.0?page=main",
+        image: "/assets/skill/kes.svg"
+    },
+    [Skill.ITOP]: {
+        id: Skill.ITOP,
+        title: Skill.ITOP,
+        url: "https://www.itophub.io/wiki/page?id=3_2_0:start",
+        image: "/assets/skill/itop.svg"
     }
 };

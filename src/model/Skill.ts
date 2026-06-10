@@ -36,4 +36,16 @@ export class Skill {
     static readonly TEAM_CITY = "TeamCity";
     static readonly POSTGRESQL = "PostgreSQL"
     static readonly KIBANA = "Kibana"
+
+    // ----- System Administrator
+    static readonly FUNCTIONAL_TESTING = "Functional Testing";
+    static readonly TERMINAL = "Windows & Linux Terminal"
+    static readonly ACTIVE_DIRECTORY = "Active Directory"
+    static readonly VSPHERE = "VMware vSphere"
+    static readonly ZABBIX = "Zabbix"
+    static readonly ITOP = "iTop"
+    static readonly KES = "Kaspersky Endpoint Security"
+
+
+
 }

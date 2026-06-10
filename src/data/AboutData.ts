@@ -3,7 +3,7 @@ import {FormatTranslateCode} from "../model/ModifiedText.ts";
 
 export const ABOUT_DATA: About = {
     image: "/assets/about-pic.png",
-    summary: "about.summary",
+    summary: new FormatTranslateCode("about.summary"),
     details: [
         {
             title: "about.experience.title",

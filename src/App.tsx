@@ -56,7 +56,7 @@ const App: React.FC = () => {
                                 description={t('about.description')}
                             />
                         </div>
-                        <div className="sectionContentWrapper aboutSectionContentWrapper">
+                        <div className="sectionContentWrapper aboutSectionContentContainer">
                             <AboutSectionContent about={ABOUT_DATA}/>
                         </div>
                         <div className="sectionTitleDuplicator aboutSectionTitleDuplicator"/>
