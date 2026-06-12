@@ -1,6 +1,6 @@
 page:
   title:
-    global: Romanov Dmitriy | AQA
+    global: Romanov Dmitry | AQA
 nav:
   profile: Profile
   about: About
@@ -9,7 +9,7 @@ nav:
   contacts: Contacts
 profile:
   profile_image: Profile image
-  greetings: Hi! I'm
+  greetings: "Hi! I'm"
   fullname: Romanov Dmitriy
   position: QA Automation Engineer
   buttons:
@@ -54,12 +54,11 @@ experience:
       position: System Engineer
       company: '"INFORMATION TECHNOLOGY CENTER" OF THE CHUVASH REPUBLIC'
       short_description: |
-        Provided the operation of telecommunications and computer equipment
-        for the executive authorities and local self-government of the Chuvash Republic. Managed virtual environments,
-        including resource migration and optimization. I installed software, diagnosed and resolved hardware and
-        software issues on workstations. I maintained documentation in a Helpdesk system, created user guides, and
-        trained new team members. Additionally, I configured monitoring systems and worked with databases to support
-        critical services.
+        Performed functional testing of websites for executive authorities and local self-government bodies of the
+        Chuvash Republic. Managed virtual environments, including resource migration and optimization. I installed
+        software, diagnosed and resolved hardware and software issues on workstations. I maintained documentation in
+        a Helpdesk system, created user guides, and trained new team members. Additionally, I configured monitoring
+        systems and worked with databases to support critical services.
       description: |
         ## **System Engineer | "Information Technology Center" of the Chuvash Republic**
         11.2019 - 11.2023
