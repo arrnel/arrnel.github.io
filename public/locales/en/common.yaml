@@ -10,7 +10,7 @@ nav:
 profile:
   profile_image: Profile image
   greetings: "Hi! I'm"
-  fullname: Romanov Dmitriy
+  fullname: Romanov Dmitry
   position: QA Automation Engineer
   buttons:
     cv: Download CV
